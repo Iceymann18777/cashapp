@@ -1,0 +1,29 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/govtid/view_govt_id_front_on_exit.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv.govtid;
+
+import "com/squareup/cash/events/didv/govtid/shared/detection.proto";
+
+// View Govt Id Front On Exit
+// 
+// Event Description:
+// After card scanning finishes without completion, the max number edges of a card and/or a face detected needs to be reported.
+// 
+// Point of Trigger:
+// As the Customer leaves the scanner screen, any edges and/or face successfully captured for the front of the govt id.
+message ViewGovtIdFrontOnExit {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Max amount of edges detected by the scanner
+  optional int32 max_edges_detected = 2;
+
+  // If face was detected by the scanner.
+  optional com.squareup.cash.events.didv.govtid.shared.Detection face_detected = 3;
+
+  // A field for reporting different experiment treatments. (i.e. mitek vs control)
+  optional string treatment = 4;
+}

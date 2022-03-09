@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.payment.HomeTabsView android:id="@id/home_view" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" app:drawsInsets="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tab_toolbar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/tabs_toolbar_view" />
+    <com.squareup.cash.paymentpad.views.MainPaymentPadView android:id="@id/payment_pad" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/dummy_bottom" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tab_toolbar" />
+    <View android:id="@id/dummy_bottom" android:layout_width="0.0dip" android:layout_height="1.0px" android:layout_marginTop="12.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/payment_pad" />
+</com.squareup.cash.ui.payment.HomeTabsView>

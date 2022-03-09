@@ -1,0 +1,20 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/addressblocker/tap_address_blocker_select_completion_result.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.addressblocker;
+
+// Triggered when the customer selects one of
+// the suggested completion results.
+message TapAddressBlockerSelectCompletionResult {
+  // The zero-based index of the selection as
+  // shown in the list of results.
+  optional int32 index = 1;
+
+  // Optional flow token of the address blocker.
+  optional string flow_token = 2;
+
+  // Optional client scenario of the address blocker.
+  optional string client_scenario = 3;
+}

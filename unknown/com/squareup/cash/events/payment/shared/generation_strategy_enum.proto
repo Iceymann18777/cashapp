@@ -1,0 +1,35 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/shared/generation_strategy_enum.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.shared;
+
+// The technical source of this recipient. This represents the
+// strategy used to place the recipient in the "Bucket"
+enum GenerationStrategy {
+  // From Recent recipients.
+  // Buckets: SUGGESTED, SEARCH
+  RECENT = 1;
+  // From a Remote suggestion supplied via session.
+  // Buckets: SUGGESTED
+  REMOTE_SUGGESTION = 2;
+  // From the user's contact list.
+  // Buckets: CONTACTS, SEARCH
+  CONTACT = 3;
+  // A remote result using exact match
+  // Buckets: SEARCH
+  REMOTE_EXACT_MATCH = 4;
+  // A new customer, created when a complete alias (email or phone)
+  // is searched for and it doesn't exist locally or the server.
+  // Buckets: SEARCH
+  NEW_CUSTOMER = 5;
+  // From a list of remote matches based on a particular search
+  // query, found in FindCustomersResponse.matches
+  // Buckets: SEARCH
+  REMOTE_MATCHES = 6;
+  // The search string is a valid bitcoin wallet address and
+  // was returned as a search result. Only used in Bitcoin P2P.
+  // Buckets: SEARCH
+  BITCOIN_WALLET_ADDRESS = 7;
+}

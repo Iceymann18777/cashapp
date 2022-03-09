@@ -1,0 +1,23 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/show_document_selection_screen.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv;
+
+// Show Document Selection Screen
+// 
+// Event Description: 
+// The screen allowing a customer to select a document type to capture for d-IDV
+// is shown.
+// 
+// Point of Trigger: 
+// The user taps 'Continue' on the previous blocker telling them that they will
+// need to present a form of identity to verify.
+message ShowDocumentSelectionScreen {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+}

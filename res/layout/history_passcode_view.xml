@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.history.PasscodeView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/dialog_max_width"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/passcode_dialog_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/passcode_dialog_padding_sides" android:paddingEnd="@dimen/passcode_dialog_padding_sides">
+        <FrameLayout android:id="@id/loading_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/passcode_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.squareup.cash.ui.widget.TextSwapper android:textSize="@dimen/passcode_dialog_text_size" android:textColor="?android:textColorPrimary" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/passcode_dialog_message_margin" android:minLines="2" android:animateFirstView="false" app:allowShrinking="false" app:inAnimation="@anim/fade_in" app:outAnimation="@anim/fade_out" app:textType="balanced" />
+                <com.squareup.cash.ui.widget.PasscodeEditor android:id="@id/passcode_editor" android:padding="@dimen/passcode_dialog_editor_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/passcode_dialog_editor_margin" />
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/passcode_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <com.squareup.cash.ui.widget.keypad.KeypadView android:id="@id/keypad" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_keypad_height" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:buttonBarStyle">
+        <Button android:id="@id/cancel" android:text="@string/passcode_dialog_negative" style="?android:buttonBarButtonStyle" />
+    </LinearLayout>
+</com.squareup.cash.ui.history.PasscodeView>

@@ -1,0 +1,17 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/loyalty/merchant_threaded_view/view_reward_details.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.loyalty.merchantthreadedview;
+
+// Customer views the reward detail view for a reward.
+message ViewLoyaltyRewardDetails {
+  optional string merchant_token = 1;
+
+  optional string loyalty_program_token = 2;
+
+  optional string loyalty_account_token = 3;
+
+  optional string loyalty_reward_token = 4;
+}

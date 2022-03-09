@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/selectionblocker/tap_selection_blocker_primary_action.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.selectionblocker;
+
+// Triggered when the customer taps the primary button to submit the selection
+message TapSelectionBlockerPrimaryAction {
+  // The action that the user selected
+  optional string action = 1;
+
+  // Client scenario of the selection blocker.
+  optional string client_scenario = 2;
+}

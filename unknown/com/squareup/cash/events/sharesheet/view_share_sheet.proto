@@ -1,0 +1,9 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/sharesheet/view_share_sheet.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.sharesheet;
+
+// Triggers when the customer views the custom share sheet.
+message ViewShareSheet {}

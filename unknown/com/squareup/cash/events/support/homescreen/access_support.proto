@@ -1,0 +1,43 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/homescreen/access_support.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.homescreen;
+
+// Access Support
+// 
+// Event Description:
+// The customer attempts to access support
+// 
+// Point of Trigger:
+// - When customer taps "Support" on the profile screen
+// - When customer launches the app via SEV or chat push notification
+// - When customer taps "Support" from payment receipt
+message AccessSupport {
+  // The trigger for the action.
+  optional Trigger trigger = 1;
+
+  // The destination of the action.
+  optional Destination destination = 2;
+
+  // Possible trigger for the tap action.
+  // PROFILE - Customer taps on "Support" on the profile screen
+  // NOTIFICATION - Customer launches the app via SEV or chat push notification
+  // RECEIPT - Customer taps "Support" from the payment receipt option sheet
+  enum Trigger {
+    PROFILE = 1;
+    NOTIFICATION = 2;
+    RECEIPT = 3;
+  }
+
+  // Possible destination for the action.
+  // HOME - Show support home screen
+  // CHAT - Show support chat screen
+  // ARTICLES - Show support articles/flow screen
+  enum Destination {
+    HOME = 1;
+    CHAT = 2;
+    ARTICLES = 3;
+  }
+}

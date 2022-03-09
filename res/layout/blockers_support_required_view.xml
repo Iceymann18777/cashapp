@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.SupportRequiredView android:orientation="vertical" android:id="@id/blocker_button_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/blocker_button_container_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.squareup.cash.ui.widget.text.BalancedLineTextView android:layout_gravity="center" android:id="@id/blocker_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/support_required_title" style="?blockersTitleStyle" />
+    </FrameLayout>
+    <com.squareup.cash.mooncake.components.MooncakePrimaryButton android:id="@id/support_required_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:text="@string/support_required_button" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+</com.squareup.cash.blockers.views.SupportRequiredView>

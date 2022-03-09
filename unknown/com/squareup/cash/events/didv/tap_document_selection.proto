@@ -1,0 +1,31 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/tap_document_selection.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv;
+
+// Tap Document Selection
+// 
+// Event Description: 
+// The customer selects a document to use for d-IDV.
+// 
+// Point of Trigger: 
+// Customer taps a given navigation button within the document selection page. 
+// See DocumentType for the different buttons that may be pressed.
+message TapDocumentSelection {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+
+  // The type of document selected.
+  optional DocumentType document_type = 3;
+
+  // Possible document types.
+  enum DocumentType {
+    DRIVERS_LICENSE = 1;
+    PASSPORT = 2;
+  }
+}

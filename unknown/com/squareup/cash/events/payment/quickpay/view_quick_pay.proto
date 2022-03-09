@@ -1,0 +1,32 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/quickpay/view_quick_pay.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.quickpay;
+
+import "com/squareup/cash/events/customerprofile/shared/contact_status_enum.proto";
+
+// View Quick Pay
+// 
+// Event Description:
+// Quick Pay is a Payment Pad that is shown after a recipient is pre-selected.
+// This can be from a customer profile, app link, activity
+// or a search first experience.
+// "NewPaymentModalViewController" - iOS
+// "history/SendPaymentView" - Android
+// 
+// Point of Trigger:
+// When the Quick Pay screen is loaded.
+message ViewQuickPay {
+  // An optional value for the source/referrer of the customer to this screen.
+  optional string origin = 1;
+
+  // The external_id that is sent in the InitiatePaymentRequest.
+  // This id is generated client-side and can be used to tie events
+  // that happen before a payment is created to server side payment events.
+  optional string external_id = 2;
+
+  // Whether the recipient is in the current user's contacts.
+  optional com.squareup.cash.events.customerprofile.shared.ContactStatus contact_status = 3;
+}

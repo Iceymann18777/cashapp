@@ -1,0 +1,13 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/investing/notifications/tap_notification_bell.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.investing.notifications;
+
+import "com/squareup/cash/events/investing/notifications/shared/notification_type_enum.proto";
+
+// Tap a notification bell button from the main Investing screen.
+message TapOnANotificationBell {
+  optional com.squareup.cash.events.investing.notifications.shared.NotificationType notification_type = 1;
+}

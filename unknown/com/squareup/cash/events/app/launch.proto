@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/app/launch.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.app;
+
+// Triggers when app is launched.
+// Due to legacy event was called "Launch" we are not strictly following
+// Action Object naming convention here. Otherwise we could have called it
+// LaunchApp.
+message Launch {}

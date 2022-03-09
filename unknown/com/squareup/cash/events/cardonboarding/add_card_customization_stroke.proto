@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/add_card_customization_stroke.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when a stroke is added.
+message AddCardCustomizationStroke {
+  optional int32 stroke_count = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.VerifyHelpSheet android:orientation="vertical" android:id="@id/buttons_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/resend" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_verify_help_resend" style="@style/Widget.Cash.Bottomsheet.Item" />
+    <Button android:id="@id/edit_email" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_verify_help_edit_email" style="@style/Widget.Cash.Bottomsheet.Item" />
+    <Button android:id="@id/edit_sms" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_verify_help_edit_sms" style="@style/Widget.Cash.Bottomsheet.Item" />
+    <Button android:id="@id/call" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_verify_help_call" style="@style/Widget.Cash.Bottomsheet.Item" />
+    <Button android:id="@id/skip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_verify_help_skip" style="@style/Widget.Cash.Bottomsheet.Item" />
+    <Button android:id="@id/cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" />
+</com.squareup.cash.blockers.views.VerifyHelpSheet>

@@ -1,0 +1,14 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/shared/payment_type_enum.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.shared;
+
+// Payment Types
+enum PaymentType {
+  // sending a payment
+  SEND = 1;
+  // requesting a payment
+  REQUEST = 2;
+}

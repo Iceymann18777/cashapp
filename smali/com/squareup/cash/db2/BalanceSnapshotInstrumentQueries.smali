@@ -1,0 +1,325 @@
+.class public interface abstract Lcom/squareup/cash/db2/BalanceSnapshotInstrumentQueries;
+.super Ljava/lang/Object;
+.source "BalanceSnapshotInstrumentQueries.kt"
+
+# interfaces
+.implements Lcom/squareup/sqldelight/Transacter;
+
+
+# virtual methods
+.method public abstract select(Lkotlin/jvm/functions/Function15;)Lcom/squareup/sqldelight/Query;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/jvm/functions/Function15<",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "-",
+            "Lcom/squareup/protos/common/instrument/InstrumentType;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Boolean;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "+TT;>;)",
+            "Lcom/squareup/sqldelight/Query<",
+            "TT;>;"
+        }
+    .end annotation
+.end method
+
+.method public abstract selectDefault(Lcom/squareup/protos/franklin/api/CashInstrumentType;Lkotlin/jvm/functions/Function15;)Lcom/squareup/sqldelight/Query;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "Lkotlin/jvm/functions/Function15<",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "-",
+            "Lcom/squareup/protos/common/instrument/InstrumentType;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Boolean;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "+TT;>;)",
+            "Lcom/squareup/sqldelight/Query<",
+            "TT;>;"
+        }
+    .end annotation
+.end method
+
+.method public abstract selectForCurrency(Lcom/squareup/protos/common/CurrencyCode;Lcom/squareup/protos/franklin/api/CashInstrumentType;Lkotlin/jvm/functions/Function15;)Lcom/squareup/sqldelight/Query;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/squareup/protos/common/CurrencyCode;",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "Lkotlin/jvm/functions/Function15<",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "-",
+            "Lcom/squareup/protos/common/instrument/InstrumentType;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Boolean;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "+TT;>;)",
+            "Lcom/squareup/sqldelight/Query<",
+            "TT;>;"
+        }
+    .end annotation
+.end method
+
+.method public abstract selectForToken(Ljava/lang/String;Lkotlin/jvm/functions/Function15;)Lcom/squareup/sqldelight/Query;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/String;",
+            "Lkotlin/jvm/functions/Function15<",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "-",
+            "Lcom/squareup/protos/common/instrument/InstrumentType;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Boolean;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "+TT;>;)",
+            "Lcom/squareup/sqldelight/Query<",
+            "TT;>;"
+        }
+    .end annotation
+.end method
+
+.method public abstract selectForType(Lcom/squareup/protos/franklin/api/CashInstrumentType;Lkotlin/jvm/functions/Function15;)Lcom/squareup/sqldelight/Query;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "Lkotlin/jvm/functions/Function15<",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "-",
+            "Lcom/squareup/protos/common/instrument/InstrumentType;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Boolean;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "+TT;>;)",
+            "Lcom/squareup/sqldelight/Query<",
+            "TT;>;"
+        }
+    .end annotation
+.end method
+
+.method public abstract selectForTypes(Ljava/util/Collection;Lkotlin/jvm/functions/Function15;)Lcom/squareup/sqldelight/Query;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/Collection<",
+            "+",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            ">;",
+            "Lkotlin/jvm/functions/Function15<",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "-",
+            "Lcom/squareup/protos/common/instrument/InstrumentType;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Boolean;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "+TT;>;)",
+            "Lcom/squareup/sqldelight/Query<",
+            "TT;>;"
+        }
+    .end annotation
+.end method
+
+.method public abstract selectWithPending(Lkotlin/jvm/functions/Function15;)Lcom/squareup/sqldelight/Query;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/jvm/functions/Function15<",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Lcom/squareup/protos/franklin/api/CashInstrumentType;",
+            "-",
+            "Lcom/squareup/protos/common/instrument/InstrumentType;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/Long;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/Boolean;",
+            "-",
+            "Ljava/lang/String;",
+            "-",
+            "Ljava/lang/String;",
+            "+TT;>;)",
+            "Lcom/squareup/sqldelight/Query<",
+            "TT;>;"
+        }
+    .end annotation
+.end method

@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/homescreen/tap_home_screen_request.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.homescreen;
+
+// Triggers when the Request button is tapped on the home screen.
+message TapHomeScreenRequest {
+  // True if search_first_payments is enabled when the request button is tapped
+  optional bool has_search = 1;
+}

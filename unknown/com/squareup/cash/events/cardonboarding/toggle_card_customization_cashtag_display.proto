@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/toggle_card_customization_cashtag_display.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when the customer toggles the visibility of their cashtag on the card
+message ToggleCardCustomizationCashtagDisplay {
+  optional bool new_value = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+}

@@ -1,0 +1,18 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/formblocker/show_form_blocker.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.formblocker;
+
+// Triggered when the blocker appears on screen.
+message ShowFormBlocker {
+  // Optional blocker descriptor ID of the form blocker.
+  optional string blocker_id = 1;
+
+  // Optional flow token of the form blocker.
+  optional string flow_token = 2;
+
+  // Optional client scenario of the form blocker.
+  optional string client_scenario = 3;
+}

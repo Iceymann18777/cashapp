@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/eidv/attempt_entering_extra_full_ssn_digit.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.eidv;
+
+// Attempt Entering Extra Full SSN Digit
+// 
+// Triggered any time the customer taps a number button on the IDV Confirm Full
+// SSN screen but nine digits have already been entered.
+message AttemptEnteringExtraFullSSNDigit {}

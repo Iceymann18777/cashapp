@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.widget.SmsEditor android:layout_gravity="center" android:orientation="horizontal" android:id="@id/sms_editor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/light_divider_vertical" android:showDividers="middle" android:dividerPadding="10.0dip" style="@style/Widget.Cash.Blockers.InputForm.Container"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.squareup.cash.ui.widget.KeyboardlessEditText android:gravity="center" android:id="@id/country_calling_code" android:nextFocusDown="@id/national_number_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxWidth="88.0dip" android:inputType="phone" style="@style/Widget.Cash.Blockers.InputForm.EditText" />
+    <com.squareup.cash.ui.widget.KeyboardlessEditText android:gravity="start" android:id="@id/national_number_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" android:inputType="phone" android:autofillHints="phone" style="@style/Widget.Cash.Blockers.InputForm.EditText" />
+</com.squareup.cash.ui.widget.SmsEditor>

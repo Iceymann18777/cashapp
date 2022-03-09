@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/basic_setting_container" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" android:letterSpacing="0.01" />
+    <TextView android:textSize="16.0sp" android:id="@id/description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/profile_item_description_gap" android:fontFamily="@font/cashmarket_regular" android:letterSpacing="0.01" />
+</LinearLayout>

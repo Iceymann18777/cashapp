@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.ConfirmCvvView android:orientation="vertical" android:id="@id/blocker_keypad_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/blocker_keypad_container_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/Widget.Cash.Blockers.Content.KeypadHelpPadding">
+        <com.squareup.cash.ui.widget.TextSwapper android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?blockersTitleStyle" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.squareup.cash.ui.widget.KeyboardlessEditText android:layout_gravity="center" android:id="@id/cvv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/confirm_cvv_hint" android:inputType="numberPassword" style="@style/Widget.Cash.Blockers.EditText" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.squareup.cash.ui.widget.keypad.KeypadView android:id="@id/blocker_keypad_container_keypad" android:layout_width="fill_parent" android:layout_height="@dimen/blockers_keypad_height" android:layout_marginBottom="?blockersButtonBarGap" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+    <com.squareup.cash.ui.widget.JustifiedButtonContainer android:orientation="horizontal" android:id="@id/blocker_keypad_container_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?blockersButtonBarStyle">
+        <Button android:enabled="false" android:id="@id/next_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_next" style="?blockersButtonBarButtonStyle" />
+    </com.squareup.cash.ui.widget.JustifiedButtonContainer>
+</com.squareup.cash.blockers.views.ConfirmCvvView>

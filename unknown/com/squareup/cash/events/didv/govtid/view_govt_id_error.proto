@@ -1,0 +1,24 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/govtid/view_govt_id_error.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv.govtid;
+
+// View Govt Id Error
+// 
+// Event Description:
+// When an error is presented to the customer.
+// 
+// Point of Trigger:
+// On presenting an error to the customer from VerifyGovernmentIdRequest
+message ViewGovtIdError {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Error message that was presented to the customer.
+  optional string error_message = 2;
+
+  // A field for reporting different experiment treatments. (i.e. mitek vs control)
+  optional string treatment = 3;
+}

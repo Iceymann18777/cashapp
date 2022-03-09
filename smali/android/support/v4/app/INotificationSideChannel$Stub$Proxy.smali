@@ -1,0 +1,50 @@
+.class public Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;
+.super Ljava/lang/Object;
+.source "INotificationSideChannel.java"
+
+# interfaces
+.implements Landroid/support/v4/app/INotificationSideChannel;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/support/v4/app/INotificationSideChannel$Stub;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Proxy"
+.end annotation
+
+
+# static fields
+.field public static sDefaultImpl:Landroid/support/v4/app/INotificationSideChannel;
+
+
+# instance fields
+.field public mRemote:Landroid/os/IBinder;
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    return-object v0
+.end method

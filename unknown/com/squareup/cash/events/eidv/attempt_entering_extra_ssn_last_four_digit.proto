@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/eidv/attempt_entering_extra_ssn_last_four_digit.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.eidv;
+
+// Attempt Entering Extra SSN Last Four Digit
+// 
+// Triggered any time the customer taps a number button on the IDV Confirm SSN
+// Last Four screen but four digits have already been entered.
+message AttemptEnteringExtraSSNLastFourDigit {}

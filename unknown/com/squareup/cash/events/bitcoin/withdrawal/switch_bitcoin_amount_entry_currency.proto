@@ -1,0 +1,27 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/bitcoin/withdrawal/switch_bitcoin_amount_entry_currency.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.bitcoin.withdrawal;
+
+import "com/squareup/cash/events/bitcoin/bitcoin_display_units.proto";
+
+// Triggered when the customer tries to switch Bitcoin amount entry currency
+message SwitchBitcoinAmountEntryCurrency {
+  // The screen where Bitcoin amount entry currency was changed
+  optional Source source = 1;
+
+  // The currency that customer is switching to.
+  optional string target_currency = 2;
+
+  // The Bitcoin display units customer is using.
+  optional com.squareup.cash.events.bitcoin.BitcoinDisplayUnits bitcoin_display_units = 3;
+
+  // Different sources where Bitcoin amount entry currency can be changed
+  enum Source {
+    BITCOIN_SEND_AMOUNT = 1;
+    BITCOIN_SEND_TO_ADDRESS = 2;
+    MAIN_PAYMENT_PAD = 3;
+  }
+}

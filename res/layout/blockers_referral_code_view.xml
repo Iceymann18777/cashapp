@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.ReferralCodeView android:orientation="vertical" android:id="@id/blocker_button_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="start" android:orientation="vertical" android:id="@id/blocker_button_container_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/Widget.Cash.Blockers.Content.KeypadHelpPadding">
+        <com.squareup.cash.ui.widget.image.AvatarView2 android:textColor="@color/cash_green" android:id="@id/avatar" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginBottom="@dimen/blockers_cash_waiting_title_gap" android:importantForAccessibility="no" android:fillColor="@color/transparent" app:defaultDrawable="@drawable/referral_code_placeholder_avatar" style="?avatarSmallStyle" />
+        <com.squareup.cash.mooncake.components.MooncakeLargeText android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:lineSpacingExtra="4.0dip" />
+        <com.squareup.cash.mooncake.components.MooncakeEditText android:id="@id/reward_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/blockers_referral_code_hint" android:lineSpacingExtra="3.0dip" android:inputType="textCapCharacters|textNoSuggestions" />
+    </LinearLayout>
+    <com.squareup.cash.mooncake.components.SplitButtons android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+</com.squareup.cash.blockers.views.ReferralCodeView>

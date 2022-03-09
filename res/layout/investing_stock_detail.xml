@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.investing.screens.InvestingStockDetailsView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:drawsInsets="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.squareup.cash.mooncake.components.MooncakeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:elevation="0.0dip" app:layout_collapseMode="pin" app:navigationContentDescription="@string/close_cont_desc" app:navigationIcon="@drawable/close_black" />
+    <LinearLayout android:id="@id/investing_entity_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.squareup.cash.investing.components.InvestmentEntityView android:id="@id/investing_entity" android:paddingBottom="36.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</com.squareup.cash.investing.screens.InvestingStockDetailsView>

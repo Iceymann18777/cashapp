@@ -1,0 +1,32 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/threeds/initiate_three_ds_web_url.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.threeds;
+
+// Initiate Three DS Web URL
+// 
+// Event Description: 
+// The client attempts to load the challenge URL given by the 3DS blocker, or
+// an additional URL after that (e.g. by clicking a link). This will fire each
+// time a new URL of a challenge loads (e.g. new try or a challenge with
+// multiple pages or redirects)
+// 
+// Point of Trigger: 
+// When spinner loads after customer hits “next” on the blocker for verifying
+// payment with bank. Can initiate multiple times (e.g.  on retry, or if the
+// customer taps a link in the bank’s challenge web page).
+// 
+// Related Screen: 
+// Occurs when loading screen is initially shown for ThreeDs Blocker, as well
+// as other similar loading screens for web content.
+// 
+// Related Metric(s) and Dimension(s): Load Time, 3DS Volume and Rates/Funnel
+message InitiateThreeDSWebURL {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+}

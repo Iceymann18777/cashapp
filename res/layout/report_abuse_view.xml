@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.history.ReportAbuseView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Bottomsheet"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/content_spacing_small" android:paddingBottom="@dimen/content_spacing_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/gutter_medium" android:paddingEnd="@dimen/gutter_medium">
+        <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textAppearance="@style/TextAppearance.Cash.Instructions" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textAppearance="@style/TextAppearance.Cash.Subtext" android:gravity="center" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/actions_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle">
+        <Button android:id="@id/cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <Button android:id="@id/action" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+</com.squareup.cash.ui.history.ReportAbuseView>

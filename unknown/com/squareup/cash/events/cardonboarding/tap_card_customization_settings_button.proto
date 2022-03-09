@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/tap_card_customization_settings_button.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when the customer taps on the card customization settings button
+message TapCardCustomizationSettingsButton {
+  optional bool cashtag_enabled = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+}

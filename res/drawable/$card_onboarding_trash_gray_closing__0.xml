@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="48.0dip" android:width="32.0dip" android:viewportWidth="32.0" android:viewportHeight="48.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="can" android:translateY="16.0">
+        <path android:name="bucket" android:fillColor="#ff666666" android:pathData="M 8 8 L 6 8 L 6 19.999 C 6 23.323 8.687 26 12.001 26 L 19.999 26 C 23.323 26 26 23.313 26 19.999 L 26 8 L 24 8 L 24 19.499 C 24 21.989 22.215 24 19.999 24 L 12.001 24 C 9.787 24 8 21.992 8 19.499 L 8 8 Z" android:strokeWidth="1.0" />
+        <path android:name="indent" android:fillColor="#ff666666" android:pathData="M 11 11 L 13 11 L 13 20 L 11 20 Z M 15 11 L 17 11 L 17 20 L 15 20 Z M 19 11 L 21 11 L 21 20 L 19 20 Z" android:strokeWidth="1.0" />
+    </group>
+    <group android:name="lid" android:pivotX="72.0" android:pivotY="8.0" android:translateY="16.0">
+        <path android:name="lid_1" android:fillColor="#ff666666" android:pathData="M 14 6 L 4 6 L 4 8 L 28 8 L 28 6 L 18 6 L 18 4 L 14 4 Z" android:strokeWidth="1.0" />
+    </group>
+</vector>

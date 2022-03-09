@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/profile_cash_balance_section" android:paddingBottom="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="none"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.squareup.cash.mooncake.components.MooncakeBigAmount android:id="@id/balance" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/tab_layout_actions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+        <com.squareup.cash.mooncake.components.MooncakeSecondaryButton android:id="@id/add_cash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cash_balance_section_add_funds" android:layout_weight="1.0" android:layout_marginStart="24.0dip" android:layout_marginEnd="6.0dip" />
+        <com.squareup.cash.mooncake.components.MooncakeSecondaryButton android:id="@id/cash_out" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cash_balance_section_cash_out" android:layout_weight="1.0" android:layout_marginStart="6.0dip" android:layout_marginEnd="24.0dip" />
+    </LinearLayout>
+    <com.squareup.cash.mooncake.components.MooncakeSecondaryButton android:id="@id/cash_out_only" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cash_balance_section_cash_out" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+</LinearLayout>

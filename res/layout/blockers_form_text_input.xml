@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.formview.components.FormTextInput android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/blockers_editor_divider_light" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

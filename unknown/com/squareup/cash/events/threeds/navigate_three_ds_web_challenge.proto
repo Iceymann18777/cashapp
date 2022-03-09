@@ -1,0 +1,57 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/threeds/navigate_three_ds_web_challenge.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.threeds;
+
+// Navigate Three DS Web Challenge
+// 
+// Event Description: 
+// The client navigates in the 3DS challenge. Note this does not include
+// fields/submission in the challenge itself– this information is not
+// available.
+// 
+// Point of Trigger: 
+// Customer taps a given navigation button within the 3DS challenge page. See
+// NavigationType for the different buttons that may be pressed, as well as the
+// page in the flow on which buttons appear.
+// 
+// Related Screen: ThreeDS Blockers screens.
+// 
+// Related Metric(s) and Dimension(s): Load Time, 3DS Volume and Rates/Funnel
+message NavigateThreeDSWebChallenge {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+
+  // The type of navigation event that occurred.
+  optional NavigationType navigation_type = 3;
+
+  // The page the event was fired from.
+  optional PageType page_type = 4;
+
+  // Possible navigation types.
+  enum NavigationType {
+    // Refresh button pressed in web_challenge.
+    REFRESH = 1;
+    // Back button pressed in web_challenge.
+    BACK = 2;
+    // Forward button pressed in web_challenge.
+    FORWARD = 3;
+    // "Try again" button pressed in error_page.
+    TRY_AGAIN = 4;
+    // "Done" button pressed in error_page.
+    ERROR_DONE = 5;
+  }
+
+  // Possible page types.
+  enum PageType {
+    // Web challenge page.
+    WEB_CHALLENGE = 1;
+    // Error page.
+    ERROR_PAGE = 2;
+  }
+}

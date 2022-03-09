@@ -1,0 +1,11 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/quickpay/tap_quick_pay_request.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.quickpay;
+
+// DEPRECATED: See tap_quick_pay_continue event
+message TapQuickPayRequest {
+  option deprecated = true;
+}

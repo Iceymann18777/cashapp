@@ -1,0 +1,43 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/homescreen/change_incident_subscription.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.homescreen;
+
+// Change Incident Subscription
+// 
+// Event Description:
+// The customer subscribes to or unsubscribes from an incident alert.
+// 
+// Point of Trigger:
+// Customer taps the "Notify Me When Fixed" or "We'll Notify You" button
+// of an incident on SEVs State Module. This fire immediately without waiting
+// for the network request to complete.
+message ChangeIncidentSubscription {
+  // Client generated unique identifier per Support Home session
+  optional string flow_token = 1;
+
+  // Unique identifier of the incident.
+  optional string incident_id = 2;
+
+  // The status of the subscribed incident.
+  optional Status status = 3;
+
+  // The action to change the subcription.
+  optional Action action = 4;
+
+  // Possible incident status.
+  enum Status {
+    INVESTIGATING = 1;
+    IDENTIFIED = 2;
+    RESOLVED = 3;
+    UNKNOWN = 4;
+  }
+
+  // Possible subscription action.
+  enum Action {
+    SUBSCRIBE = 1;
+    UNSUBSCRIBE = 2;
+  }
+}

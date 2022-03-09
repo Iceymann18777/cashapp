@@ -1,0 +1,8 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/lending/view_first_time.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.lending;
+
+message ViewFirstTime {}

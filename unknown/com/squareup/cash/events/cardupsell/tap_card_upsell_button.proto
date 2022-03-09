@@ -1,0 +1,29 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardupsell/tap_card_upsell_button.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardupsell;
+
+// Triggers when customer clicks on Upsell button for Swipe and Scroll Screens
+message TapCardUpsellCallToActionButton {
+  optional Source source = 1;
+
+  // Button treatment. Populated by analytics_key field in composer config for ButtonElement
+  // i.e. "get-free-cash-card", "how-it-works", "browse-all-cards"
+  // "boost-details-ok-close"
+  optional string treatment = 2;
+
+  // By group, meaning the swipe page or scroll section *
+  optional int32 group_index = 3;
+
+  // Populated by the analytics_key field in composer protos
+  // CardTabNullStateSwipeConfig.SwipePage and
+  // CardTabNullStateScrollConfig.ScrollSection
+  optional string group_treatment = 4;
+
+  enum Source {
+    SWIPE = 1;
+    SCROLL = 2;
+  }
+}

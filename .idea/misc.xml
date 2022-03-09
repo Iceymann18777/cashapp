@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="res/drawable-v21/$avd_hide_password__0.xml" value="0.1535" />
+        <entry key="res/drawable-v21/$card_onboarding_trash_gray__0.xml" value="0.1535" />
+        <entry key="res/drawable-v21/$card_onboarding_trash_gray__1.xml" value="0.1535" />
+        <entry key="res/drawable-v21/$card_onboarding_trash_gray_closing__0.xml" value="0.1535" />
+        <entry key="res/drawable/$avd_hide_password__0.xml" value="0.1535" />
+        <entry key="res/drawable/$card_onboarding_trash_gray__0.xml" value="0.1535" />
+        <entry key="res/drawable/$card_onboarding_trash_gray__1.xml" value="0.1535" />
+        <entry key="res/drawable/$card_onboarding_trash_gray_closing__0.xml" value="0.1535" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Android API 32 Platform" project-jdk-type="Android SDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

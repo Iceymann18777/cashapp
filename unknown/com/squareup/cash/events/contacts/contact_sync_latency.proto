@@ -1,0 +1,30 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/contacts/contact_sync_latency.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.contacts;
+
+// Measures the latency of a contact sync
+message ContactSyncLatency {
+  // The total latency, client + server
+  optional double total = 1;
+
+  // The roundtrip server latency from the client's point of view
+  optional double server = 2;
+
+  // Whether the contact sync was configured for an immediate response, which alters the timeouts
+  optional bool needed_immediate_response = 3;
+
+  // What type of response the server returned
+  optional ServerResponse server_response = 4;
+
+  enum ServerResponse {
+    SUCCESS = 1;
+    ERROR = 2;
+    NO_RESPONSE_NO_ERROR = 3;
+    TOO_MANY_ATTEMPTS = 4;
+    INVALID = 5;
+    UNKNOWN = 6;
+  }
+}

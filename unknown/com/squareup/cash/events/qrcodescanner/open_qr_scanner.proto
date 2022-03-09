@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/qrcodescanner/open_qr_scanner.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.qrcodescanner;
+
+// Triggers when primary cash QR code button is tapped
+message OpenQRScanner {
+  // Load time from QR scanner button press to first camera frame
+  optional int32 load_time_ms = 2;
+}

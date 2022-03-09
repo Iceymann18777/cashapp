@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent" android:inAnimation="@anim/fade_in" android:outAnimation="@anim/fade_out" android:animateFirstView="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/claim_confirm" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/Widget.Cash.Blockers.Content">
+            <com.squareup.cash.ui.widget.text.BalancedLineTextView android:layout_gravity="center_vertical" android:id="@id/claim_message" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?blockersTitleStyle" />
+        </FrameLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:buttonBarStyle">
+            <Button android:id="@id/claim_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/payment_claim_verification_negative" android:layout_weight="1.0" />
+            <Button android:id="@id/claim_deposit" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/payment_claim_verification_positive" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

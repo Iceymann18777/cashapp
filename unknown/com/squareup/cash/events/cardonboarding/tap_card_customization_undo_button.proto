@@ -1,0 +1,17 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/tap_card_customization_undo_button.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when undo button is clicked
+message TapCardCustomizationUndoButton {
+  optional int32 stroke_count = 1;
+
+  optional int32 stamp_count = 2;
+
+  optional string flow_token = 3;
+
+  optional string client_scenario = 4;
+}

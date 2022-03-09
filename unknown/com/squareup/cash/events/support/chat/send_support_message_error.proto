@@ -1,0 +1,20 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/chat/send_support_message_error.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.chat;
+
+// Send Support Message Error
+// 
+// Event Description:
+// A message delivery has failed
+message SendSupportMessageError {
+  // Type of message being sent
+  optional MessageType message_type = 1;
+
+  enum MessageType {
+    TEXT = 1;
+    SUGGESTED_REPLY = 2;
+  }
+}

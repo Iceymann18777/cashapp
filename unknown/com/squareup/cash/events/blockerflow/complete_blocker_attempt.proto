@@ -1,0 +1,40 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/blockerflow/complete_blocker_attempt.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.blockerflow;
+
+// Triggers when a user attempts to advance from a blocker
+// before we send a server request.
+message CompleteBlockerAttempt {
+  // The un-prefixed ClientScenario enum from squareup.franklin.app protos.
+  // (i.e. PAYMENT_FLOW, ONBOARDING, PROFILE, etc.)
+  optional string client_scenario = 1;
+
+  // The unique flow token given to every flow.
+  optional string flow_token = 2;
+
+  // The server provided id on a BlockerDescriptor.
+  optional string blocker_id = 3;
+
+  // The type of blocker that's contained in go/blockersproto.
+  // The value should be identical to the property key.
+  // (i.e. email, passcode_creation, card, government_id, etc.)
+  // There's a loose contract that only one property will be set,
+  // but in the event that there are multiple, this should be a
+  // comma delimited list in alphabetic order.
+  optional string blocker_type = 4;
+
+  // The time spent on this blocker in milleseconds.
+  // If a blocker contains multiple screens (subcomponents),
+  // the duration should be representative of all of them.
+  optional int32 input_duration_ms = 5;
+
+  enum CompletionType {
+    // When a customer skips a blocker.
+    SKIP = 1;
+    // When a customer submits input to be sent to the server.
+    SUBMIT = 2;
+  }
+}

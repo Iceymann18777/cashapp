@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.FullCountryListView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:navigationContentDescription="@string/action_bar_close" app:navigationIcon="?actionBarCloseIcon">
+        <TextView android:textAppearance="?actionBarTitleAppearance" android:ellipsize="end" android:id="@id/toolbar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_set_country_select_title" android:singleLine="true" />
+    </androidx.appcompat.widget.Toolbar>
+    <com.squareup.cash.ui.widget.recycler.CashRecyclerView android:id="@id/countries_list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</com.squareup.cash.blockers.views.FullCountryListView>

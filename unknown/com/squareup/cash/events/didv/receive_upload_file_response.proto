@@ -1,0 +1,41 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/receive_upload_file_response.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv;
+
+// Receive Upload File Response
+// 
+// Event Description: 
+// When we receive the response for a given Send Upload File Request – either 
+// successfully or failed to evaluate (with associated error messaging).
+// 
+// Point of Trigger: 
+// The client receives the response from the upload-file endpoint, and we either
+// show error messaging in the case of an error or continue with the flow in the
+// case of a success.
+message ReceiveUploadFileResponse {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+
+  // Result of the attempt to send the request.
+  optional ResultState result_state = 3;
+
+  // Localized error text, if applicable. Not present for success state.
+  optional string result_error_description = 4;
+
+  // Http error code, if present.
+  optional int32 result_error_code = 5;
+
+  // Possible result states for sending the request.
+  enum ResultState {
+    // Successfully loaded.
+    SUCCESS = 1;
+    // Failed to load.
+    FAILURE = 2;
+  }
+}

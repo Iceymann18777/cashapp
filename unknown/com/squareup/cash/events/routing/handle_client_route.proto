@@ -1,0 +1,14 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/routing/handle_client_route.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.routing;
+
+// Triggers when the app handles a client route.
+message HandleClientRoute {
+  optional string client_route_name = 1;
+
+  // Free-form parameters in the form: "key1=value1,key2=value2,etc"
+  optional string joined_key_value_parameters = 2;
+}

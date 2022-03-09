@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/retreat_from_card_preview.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when back is pressed on card preview screen
+message RetreatFromCardPreview {
+  optional bool has_customization = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+}

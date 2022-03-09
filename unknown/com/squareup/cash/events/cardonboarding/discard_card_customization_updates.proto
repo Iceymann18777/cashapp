@@ -1,0 +1,19 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/discard_card_customization_updates.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when the customer taps cancel on the card customization screen
+message DiscardCardCustomizationUpdates {
+  optional string theme_token = 1;
+
+  optional bool has_customization = 2;
+
+  optional bool has_customization_changed = 3;
+
+  optional string flow_token = 4;
+
+  optional string client_scenario = 5;
+}

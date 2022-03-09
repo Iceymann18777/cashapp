@@ -1,0 +1,25 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/show_card_customization_editor.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when the customer enters the card customization screen
+message ShowCardCustomizationEditor {
+  optional string theme_token = 1;
+
+  optional bool has_customization = 2;
+
+  optional CashtagDisplay cashtag_display = 3;
+
+  optional string flow_token = 4;
+
+  optional string client_scenario = 5;
+
+  enum CashtagDisplay {
+    ALWAYS_HIDDEN = 1;
+    ALWAYS_SHOW = 2;
+    OPTIONAL = 3;
+  }
+}

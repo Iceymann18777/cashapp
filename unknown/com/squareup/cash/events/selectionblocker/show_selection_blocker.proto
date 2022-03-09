@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/selectionblocker/show_selection_blocker.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.selectionblocker;
+
+// Triggered when the selection blocker appears on screen.
+message ShowSelectionBlocker {
+  // Blocker descriptor ID of the selection blocker.
+  optional string blocker_id = 1;
+}

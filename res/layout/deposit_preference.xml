@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="?selectableItemBackground" android:paddingTop="@dimen/payment_instrument_padding_vertical" android:paddingBottom="@dimen/payment_instrument_padding_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/payment_instrument_padding_left" android:paddingEnd="@dimen/payment_instrument_padding_right"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/option_name" android:layout_width="0.0dip" android:layout_height="fill_parent" android:lines="1" android:drawablePadding="16.0dip" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/payment_instrument_secondary_text_size" android:textColor="@color/standard_gray_hint" android:gravity="center" android:id="@id/option_fee" android:layout_width="wrap_content" android:layout_height="fill_parent" android:fontFamily="@font/cashmarket_medium" />
+</LinearLayout>

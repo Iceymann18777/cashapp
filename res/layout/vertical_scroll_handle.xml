@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="end" android:id="@id/touch_target" android:layout_width="40.0dip" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/handle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0">
+        <TextView android:textAppearance="@style/TextAppearance.Cash.Sublabel" android:textColor="@color/standard_white_normal" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/indicator" android:background="@drawable/gray_pill" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:importantForAccessibility="no" android:fontFamily="@font/cashmarket_medium" android:layout_marginEnd="30.0dip" />
+        <View android:background="@color/accent_gray_normal" android:layout_width="2.0dip" android:layout_height="60.0dip" android:layout_marginEnd="2.0dip" />
+    </LinearLayout>
+</merge>

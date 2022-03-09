@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.FileBlockerView android:background="@color/standard_black_normal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.squareup.scannerview.ScannerView android:id="@id/scanner" android:layout_width="fill_parent" android:layout_height="fill_parent" app:sv_previewButtonsLayout="@layout/scanner_preview_buttons_layout" app:sv_textLayout="@layout/scanner_title_view" />
+        <TextView android:textAppearance="@style/TextAppearance.Cash.Badge" android:textColor="?android:textColorPrimary" android:id="@id/tip_view" android:paddingTop="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:textAllCaps="true" />
+        <com.squareup.cash.mooncake.components.SplitButtons android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+        <com.squareup.cash.mooncake.components.SplitButtons android:id="@id/review_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+    </RelativeLayout>
+</com.squareup.cash.blockers.views.FileBlockerView>

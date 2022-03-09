@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.instruments.views.DepositsSection android:orientation="vertical" android:id="@id/profile_deposits_section" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/deposits_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/section_deposits_header" style="@style/Widget.Cash.SectionHeader" />
+    <com.squareup.cash.ui.widget.SwitchSettingView android:id="@id/transfer_immediately" android:layout_width="fill_parent" android:layout_height="wrap_content" app:description="@string/profile_balance_deposit_preference_description" app:title="@string/profile_balance_deposit_preference" />
+    <com.squareup.cash.instruments.views.DepositPreferenceGroup android:orientation="vertical" android:id="@id/deposit_preferences" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.squareup.cash.instruments.views.DepositsSection>

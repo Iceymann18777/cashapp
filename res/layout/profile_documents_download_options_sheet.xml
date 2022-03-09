@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.profile.views.ProfileDocumentsDownloadOptionsSheet android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Bottomsheet"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="12.0dip" android:paddingBottom="48.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+        <TextView android:textAppearance="@style/TextAppearance.Cash.Title" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" />
+        <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textAppearance="@style/TextAppearance.Cash.Sublabel" android:textSize="16.0sp" android:textColor="?android:textColorSecondary" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+    </LinearLayout>
+    <Button android:textColor="?colorAccent" android:id="@id/download" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_documents_download_options_download" android:fontFamily="@font/cashmarket_medium" style="@style/Widget.Cash.Bottomsheet.Item" />
+    <Button android:textColor="?colorAccent" android:id="@id/email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_documents_download_options_email" android:fontFamily="@font/cashmarket_medium" style="@style/Widget.Cash.Bottomsheet.Item" />
+</com.squareup.cash.profile.views.ProfileDocumentsDownloadOptionsSheet>

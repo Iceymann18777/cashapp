@@ -1,0 +1,20 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/addressblocker/tap_address_blocker_next_button.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.addressblocker;
+
+// Triggered when the customer taps the
+// “Next” button to submit the input.
+message TapAddressBlockerNextButton {
+  // Whether the address entered by the customer
+  // is deemed valid by the client.
+  optional bool is_valid = 1;
+
+  // Optional flow token of the address blocker.
+  optional string flow_token = 2;
+
+  // Optional client scenario of the address blocker.
+  optional string client_scenario = 3;
+}

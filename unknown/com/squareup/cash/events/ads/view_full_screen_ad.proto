@@ -1,0 +1,11 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/ads/view_full_screen_ad.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.ads;
+
+// Triggers when customer views a full-screen ad
+message ViewFullScreenAd {
+  optional string ad_experiment_token = 1;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.EnterBitcoinWalletAddressView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/Widget.Cash.Blockers.Content">
+        <com.squareup.cash.ui.widget.TextSwapper android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?blockersTitleStyle" />
+        <EditText android:layout_gravity="center_horizontal" android:id="@id/wallet_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/blockers_set_name_text_gap" android:hint="@string/profile_section_balance_btc_wallet_hint" android:inputType="textNoSuggestions" android:imeOptions="actionGo" style="@style/Widget.Cash.Blockers.EditText" />
+    </LinearLayout>
+    <com.squareup.cash.mooncake.components.MooncakePrimaryButton android:id="@id/next_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:text="@string/blockers_next" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+</com.squareup.cash.blockers.views.EnterBitcoinWalletAddressView>

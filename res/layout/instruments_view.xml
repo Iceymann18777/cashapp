@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.InstrumentsView android:background="@color/standard_white_normal" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false" app:drawsInsets="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tab_toolbar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/tabs_toolbar_view" />
+    <ScrollView android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tab_toolbar">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/cash_balance_section" layout="@layout/cash_balance_section" />
+            <include android:id="@id/direct_deposit_section" layout="@layout/direct_deposit_section" />
+            <com.squareup.cash.instruments.views.InstrumentsSection android:id="@id/instruments_section" android:background="@color/standard_white_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</com.squareup.cash.ui.InstrumentsView>

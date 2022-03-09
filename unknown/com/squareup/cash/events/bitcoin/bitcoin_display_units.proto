@@ -1,0 +1,14 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/bitcoin/bitcoin_display_units.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.bitcoin;
+
+// Bitcoin display units
+enum BitcoinDisplayUnits {
+  // 1 BTC = 100,000,000 SATS
+  BITCOIN = 1;
+  // 1 sat = 0.00000001 BTC
+  SATOSHIS = 2;
+}

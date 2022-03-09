@@ -1,0 +1,9 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/pendingreferrals/view_pending_referrals_rollup.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.pendingreferrals;
+
+// Triggers when the pending referrals rollup feed is displayed
+message ViewPendingReferralsRollup {}

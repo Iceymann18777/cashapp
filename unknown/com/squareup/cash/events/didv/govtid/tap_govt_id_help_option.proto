@@ -1,0 +1,34 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/govtid/tap_govt_id_help_option.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv.govtid;
+
+// Tap Govt Id Help Option
+// 
+// Event Description:
+// Customer selects a help option from within the help menu.
+// 
+// Point of Trigger:
+// Customer taps an option within the help menu.
+message TapGovtIdHelpOption {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // The title of the selected option as displayed to the customer.
+  optional string action = 2;
+
+  // Context for selecting help option.
+  optional Context context = 3;
+
+  // A field for reporting different experiment treatments. (i.e. mitek vs control)
+  optional string treatment = 4;
+
+  enum Context {
+    // Front of ID.
+    FRONT = 1;
+    // Back of ID.
+    BACK = 2;
+  }
+}

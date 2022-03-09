@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.squareup.cash.ui.widget.KeyboardlessEditText android:enabled="false" android:textColorHint="@android:color/transparent" android:gravity="start|center" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/card_number_max" android:singleLine="true" android:inputType="none" />
+        <com.squareup.cash.ui.widget.KeyboardlessEditText android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/card_number" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/debit_card_number_hint" android:maxLines="1" android:singleLine="true" />
+        <HorizontalScrollView android:id="@id/card_details_container" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <Space android:id="@id/card_component_spacer_1" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                <com.squareup.cash.ui.widget.KeyboardlessEditText android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/card_expiration" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/card_expiration_hint" android:maxLines="1" android:singleLine="true" />
+                <Space android:id="@id/card_component_spacer_2" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                <com.squareup.cash.ui.widget.KeyboardlessEditText android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/card_security_code" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/card_security_code_hint" android:maxLines="1" android:singleLine="true" android:layout_marginStart="8.0dip" />
+                <EditText android:gravity="start" android:layout_gravity="center_vertical" android:id="@id/card_postal_alpha" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/card_postal_hint_us" android:maxLines="1" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionGo" android:layout_marginStart="8.0dip" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </FrameLayout>
+</FrameLayout>

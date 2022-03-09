@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.SelectionView android:orientation="vertical" android:id="@id/blocker_button_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.squareup.cash.ui.blockers.LoadingLayout android:id="@id/blocker_button_container_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.squareup.cash.mooncake.components.MooncakeLargeText android:id="@id/main" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:lineSpacingMultiplier="1.2" android:paddingStart="@dimen/blockers_padding" android:paddingEnd="@dimen/blockers_padding" />
+            <ImageView android:layout_gravity="bottom|center" android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:importantForAccessibility="no" />
+        </LinearLayout>
+    </com.squareup.cash.ui.blockers.LoadingLayout>
+    <com.squareup.cash.mooncake.components.SplitButtons android:id="@id/blocker_button_container_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+</com.squareup.cash.blockers.views.SelectionView>

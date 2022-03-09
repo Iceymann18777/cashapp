@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.SelectionView android:orientation="vertical" android:id="@id/blocker_button_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/blocker_button_container_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Widget.Cash.Blockers.Content">
+            <FrameLayout android:id="@id/icon_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="bottom|center" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_icon_text_gap" android:importantForAccessibility="no" />
+                <TextView android:textSize="100.0sp" android:gravity="center" android:layout_gravity="bottom" android:id="@id/amount" android:layout_width="fill_parent" android:layout_height="140.0dip" android:lines="1" android:fontFamily="@font/cashmarket_regular" app:autoSizeTextType="uniform" />
+            </FrameLayout>
+            <com.squareup.cash.ui.widget.text.BalancedLineTextView android:gravity="center" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2" style="?blockersTitleStyle" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+                <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textSize="16.0sp" android:gravity="center_horizontal" android:id="@id/main" android:layout_width="fill_parent" android:layout_height="fill_parent" android:lineSpacingMultiplier="1.2" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/details_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Blockers.Content" />
+            </FrameLayout>
+            <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textSize="12.0sp" android:gravity="center_horizontal" android:id="@id/footer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="280.0dip" android:lineSpacingMultiplier="1.2" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/options_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Widget.Cash.Blockers.Content">
+            <ImageView android:layout_gravity="bottom|center" android:id="@id/options_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_icon_text_gap" android:importantForAccessibility="no" />
+            <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:gravity="center_horizontal" android:id="@id/options_main" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2" />
+            <LinearLayout android:orientation="vertical" android:id="@id/options_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+    <com.squareup.cash.mooncake.components.SplitButtons android:id="@id/blocker_button_container_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+</com.squareup.cash.blockers.views.SelectionView>

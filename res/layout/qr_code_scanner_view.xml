@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.squareup.scannerview.ScannerView android:id="@id/scanner" android:layout_width="fill_parent" android:layout_height="fill_parent" app:sv_textLayout="@layout/scanner_title_view" />
+    <Button android:textColor="@color/standard_white_normal" android:layout_gravity="bottom" android:id="@id/manual" android:background="@drawable/button_background_black" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

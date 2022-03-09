@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.payments.views.SelectPaymentInstrumentView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Bottomsheet"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textSize="@dimen/payment_instrument_header_text" android:gravity="center" android:id="@id/header" android:paddingTop="@dimen/payment_instrument_header_padding_vertical" android:paddingBottom="@dimen/payment_instrument_header_padding_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/payment_instrument_header_padding_sides" android:paddingEnd="@dimen/payment_instrument_header_padding_sides" />
+    <ListView android:id="@id/instruments" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Button android:id="@id/cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" />
+</com.squareup.cash.payments.views.SelectPaymentInstrumentView>

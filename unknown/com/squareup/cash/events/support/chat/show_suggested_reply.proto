@@ -1,0 +1,13 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/chat/show_suggested_reply.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.chat;
+
+// Show Suggested Replies
+// 
+// Event Description:
+// A suggested reply is displayed to the customer. This can be logged more than
+// once if the suggested reply's visibility changes.
+message ShowSuggestedReplies {}

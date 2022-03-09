@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/eidv/enter_confirm_ssn_last_four_text.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.eidv;
+
+// Enter Confirm SSN Last Four Text
+// 
+// Triggered when the customer types the first character into the IDV Confirm
+// SSN Last Four screen any time it is empty (this may happen multiple times).
+message EnterConfirmSSNLastFourText {}

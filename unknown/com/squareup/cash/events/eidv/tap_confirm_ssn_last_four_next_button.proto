@@ -1,0 +1,16 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/eidv/tap_confirm_ssn_last_four_next_button.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.eidv;
+
+// Tap Confirm SSN Last Four Next Button
+// 
+// Triggered any time the customer taps the Next button in the IDV Confirm SSN
+// Last Four screen, including when it does not advance to the next screen
+// because not enough digits have been entered.
+message TapConfirmSSNLastFourNextButton {
+  // Number of digits currently entered in the SSN field
+  optional int32 digits_entered = 1;
+}

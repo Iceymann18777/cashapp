@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.history.views.ActivityLoyaltyMerchantView android:id="@id/activity_loyalty" android:background="@color/background_gray_normal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar" android:background="@color/standard_white_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/appbar_state_list_animator">
+        <include layout="@layout/activity_contact_header" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.squareup.cash.ui.widget.recycler.CashRecyclerView android:id="@id/details" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.squareup.cash.history.views.ActivityLoyaltyMerchantView>

@@ -1,0 +1,22 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/lending/tap_repay.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.lending;
+
+message TapRepay {
+  optional Source source = 1;
+
+  optional ButtonState button_state = 2;
+
+  enum Source {
+    CREDIT_LINE_DETAILS = 1;
+    LOAN_DETAILS = 2;
+  }
+
+  enum ButtonState {
+    EARLY = 1;
+    NOW = 2;
+  }
+}

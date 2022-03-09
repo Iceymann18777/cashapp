@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.paymentfees.SelectFeeOptionView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Bottomsheet"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textSize="@dimen/select_fee_option_header_text_size" android:gravity="center" android:id="@id/header" android:paddingTop="@dimen/select_fee_option_header_padding_top" android:paddingBottom="@dimen/select_fee_option_header_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/select_fee_option_header_padding_sides" android:paddingEnd="@dimen/select_fee_option_header_padding_sides" />
+    <LinearLayout android:orientation="vertical" android:id="@id/fee_options" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?dividerHorizontal" android:showDividers="middle" />
+    <Button android:id="@id/cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" />
+</com.squareup.cash.paymentfees.SelectFeeOptionView>

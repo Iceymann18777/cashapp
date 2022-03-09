@@ -1,0 +1,16 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/instruments/tap_instrument_row.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.instruments;
+
+// Triggers when the customer taps a row in the instruments section of the Banking Tab.
+message TapInstrumentRow {
+  // The row type describing the instrument being selected
+  optional RowType row_type = 1;
+
+  enum RowType {
+    BANK_ACCOUNT_DETAILS = 1;
+  }
+}

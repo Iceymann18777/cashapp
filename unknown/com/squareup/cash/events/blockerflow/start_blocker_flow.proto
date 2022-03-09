@@ -1,0 +1,22 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/blockerflow/start_blocker_flow.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.blockerflow;
+
+// Triggers when a flow is initialized and presented to a customer
+message StartBlockerFlow {
+  // The un-prefixed ClientScenario enum from squareup.franklin.app protos.
+  // (i.e. PAYMENT_FLOW, ONBOARDING, PROFILE, etc.)
+  optional string client_scenario = 1;
+
+  // The unique flow token given to every flow.
+  optional string flow_token = 2;
+
+  // A "->" delimited list of blocker_ids in the ScenarioPlan
+  // that a flow is initialized with. This can be null, when
+  // we don't have a scenario plan cached on the client.
+  // This should include duplicate blocker_ids if present.
+  optional string cached_start_path = 3;
+}

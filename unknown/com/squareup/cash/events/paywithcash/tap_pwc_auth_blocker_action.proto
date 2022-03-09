@@ -1,0 +1,26 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/paywithcash/tap_pwc_auth_blocker_action.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.paywithcash;
+
+import "com/squareup/cash/events/blockerflow/shared/analytics_blocker_action.proto";
+
+// Triggers when a blocker action is performed on the Pay with Cash Authorization blocker.
+message TapPayWithCashAuthorizationBlockerAction {
+  // Optional property that gets set when the BlockerAction == SUBMIT_ACTION.
+  optional string action_id = 1;
+
+  // Optional blocker descriptor ID of the blocker.
+  optional string blocker_id = 2;
+
+  // Optional blocker action of the blocker.
+  optional com.squareup.cash.events.blockerflow.shared.AnalyticsBlockerAction blocker_action = 3;
+
+  // Optional flow token of the blocker.
+  optional string flow_token = 4;
+
+  // Optional client scenario of the blocker.
+  optional string client_scenario = 5;
+}

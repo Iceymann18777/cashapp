@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/govtid/shared/detection.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv.govtid.shared;
+
+enum Detection {
+  // Asset was detected by the scanner
+  DETECTED = 1;
+  // Asset was not detected by the scanner
+  NOT_DETECTED = 2;
+  // Asset was disabled for the scanner to detect
+  DISABLED = 3;
+}

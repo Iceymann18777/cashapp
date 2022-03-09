@@ -1,0 +1,23 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/finish_card_customization.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when the customer taps done on the card customization screen
+message FinishCardCustomization {
+  optional string theme_token = 1;
+
+  optional int32 stroke_count = 2;
+
+  optional int32 stamp_count = 3;
+
+  optional bool has_customization_changed = 4;
+
+  optional bool cashtag_enabled = 5;
+
+  optional string flow_token = 6;
+
+  optional string client_scenario = 7;
+}

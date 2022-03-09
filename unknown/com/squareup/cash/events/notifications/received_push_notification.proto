@@ -1,0 +1,19 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/notifications/received_push_notification.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.notifications;
+
+// A push notification has been received by the app.
+message ReceivedPushNotification {
+  // The state the app was in when the notification was received.
+  optional AppState app_state = 1;
+
+  enum AppState {
+    // The app was in the foreground when the notification was received
+    FOREGROUND = 1;
+    // The app was in the background when the notification was received
+    BACKGROUND = 2;
+  }
+}

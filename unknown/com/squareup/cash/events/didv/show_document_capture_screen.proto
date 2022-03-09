@@ -1,0 +1,25 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/show_document_capture_screen.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv;
+
+// Show Document Capture Screen
+// 
+// Event Description: 
+// The screen allowing a customer to capture an image of a document for d-IDV
+// is shown.
+// 
+// Point of Trigger: 
+// The user taps a document in the document selection screen and this screen, 
+// the document capture screen, is presented. This event may fire multiple times
+// in a given flow because the user can close and reopen it (choose a different 
+// document) and can later retake the image.
+message ShowDocumentCaptureScreen {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+}

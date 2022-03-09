@@ -1,0 +1,52 @@
+.class public final Lcom/squareup/cash/instruments/presenters/AccountDetailsPresenter$sam$io_reactivex_functions_Function4$0;
+.super Ljava/lang/Object;
+.source "AccountDetailsPresenter.kt"
+
+# interfaces
+.implements Lio/reactivex/functions/Function4;
+
+
+# instance fields
+.field public final synthetic function:Lkotlin/jvm/functions/Function4;
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/jvm/functions/Function4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/squareup/cash/instruments/presenters/AccountDetailsPresenter$sam$io_reactivex_functions_Function4$0;->function:Lkotlin/jvm/functions/Function4;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    const-string v0, "p0"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "p1"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "p2"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "p3"
+
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/squareup/cash/instruments/presenters/AccountDetailsPresenter$sam$io_reactivex_functions_Function4$0;->function:Lkotlin/jvm/functions/Function4;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Lkotlin/jvm/functions/Function4;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

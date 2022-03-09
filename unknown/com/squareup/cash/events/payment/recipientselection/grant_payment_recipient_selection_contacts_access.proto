@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/recipientselection/grant_payment_recipient_selection_contacts_access.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.recipientselection;
+
+import "com/squareup/cash/events/payment/shared/payment_type_enum.proto";
+
+// Triggers when a customer approves contact access in the
+// payment recipient selector.
+message GrantPaymentRecipientSelectionContactsAccess {
+  // The preselected payment type
+  optional com.squareup.cash.events.payment.shared.PaymentType payment_type = 1;
+}

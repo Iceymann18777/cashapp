@@ -1,0 +1,29 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/chat/send_support_message.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.chat;
+
+// Send Support Message
+// 
+// Event Description:
+// The customer sends a message through support chat
+message SendSupportMessage {
+  // Type of message being sent
+  optional MessageType message_type = 1;
+
+  // Indicates if there were suggested replies in the last message
+  optional bool has_suggested_replies = 2;
+
+  // Indicates if customer is retrying the sending of this message
+  optional bool is_retry = 3;
+
+  // Length of a text message. Only applicable for the TEXT MessageType.
+  optional int32 text_length = 4;
+
+  enum MessageType {
+    TEXT = 1;
+    SUGGESTED_REPLY = 2;
+  }
+}

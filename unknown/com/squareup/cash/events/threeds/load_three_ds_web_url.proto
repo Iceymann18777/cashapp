@@ -1,0 +1,55 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/threeds/load_three_ds_web_url.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.threeds;
+
+// Load Three DS Web URL
+// 
+// Event Description: 
+// Anytime client finishes loading the 3DS challenge URL or any subsequent URL
+// during the 3DS challenge. Every Load will have an Initiate counterpart.
+// 
+// Point of Trigger: 
+// Each time the given page loads (or fails to load) for the customer. Upon
+// failure to load, we’d expect to see “error status” page rather than the 3DS
+// challenge.
+// 
+// Related Screen: 
+// ThreeDs Blocker screen (will show bank’s content on success, client side
+// error screen on failure)
+// 
+// Related Metric(s) and Dimension(s): Load Time, 3DS Volume and Rates/Funnel
+message LoadThreeDSWebURL {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+
+  // Result of the attempt to load the URL.
+  optional ResultState result_state = 3;
+
+  // Localized error text, if applicable. Not present for success state.
+  optional string result_error_description = 4;
+
+  // Type of error that occurred, if applicable. Not present for success state.
+  optional ResultErrorType result_error_type = 5;
+
+  // Possible result states for loading.
+  enum ResultState {
+    // Successfully loaded.
+    SUCCESS = 1;
+    // Failed to load.
+    FAILURE = 2;
+  }
+
+  // Possible result error types.
+  enum ResultErrorType {
+    // Attempt may be manually retried by the customer tapping a button.
+    RETRIABLE = 1;
+    // Permanent failure.
+    NONRETRIABLE = 2;
+  }
+}

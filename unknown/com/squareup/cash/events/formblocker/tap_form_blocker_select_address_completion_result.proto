@@ -1,0 +1,20 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/formblocker/tap_form_blocker_select_address_completion_result.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.formblocker;
+
+// Triggered when the customer selects one of the suggested completion results
+// in an address element.
+message TapFormBlockerSelectAddressCompletionResult {
+  // The zero-based index of the selected result in the list of completion
+  // items.
+  optional int32 selected_index = 1;
+
+  // Optional flow token of the form blocker.
+  optional string flow_token = 2;
+
+  // Optional client scenario of the form blocker.
+  optional string client_scenario = 3;
+}

@@ -1,0 +1,9 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/pendingtransactions/view_pending_transactions_rollup.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.pendingtransactions;
+
+// Triggers when the pending transactions rollup feed is displayed
+message ViewPendingTransactionsRollup {}

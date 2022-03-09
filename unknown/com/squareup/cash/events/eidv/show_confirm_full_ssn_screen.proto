@@ -1,0 +1,11 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/eidv/show_confirm_full_ssn_screen.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.eidv;
+
+// Show Confirm Full SSN Screen
+// 
+// Triggered when the Confirm Full SSN screen is shown during IDV.
+message ShowConfirmFullSSNScreen {}

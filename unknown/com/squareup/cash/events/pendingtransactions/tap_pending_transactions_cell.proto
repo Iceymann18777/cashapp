@@ -1,0 +1,9 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/pendingtransactions/tap_pending_transactions_cell.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.pendingtransactions;
+
+// Triggers when customer taps the pending transactions rollup cell
+message TapPendingTransactionsRollupCell {}

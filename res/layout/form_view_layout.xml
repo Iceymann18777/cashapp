@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.squareup.cash.mooncake.components.MooncakeToolbar android:id="@id/toolbar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:elevation="0.0dip" />
+    <ScrollView android:id="@id/scroll_container" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/elements_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <FrameLayout android:id="@id/button_container" android:paddingTop="@dimen/blockers_button_margins" android:paddingBottom="@dimen/blockers_button_margins" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/blockers_button_margins" android:paddingEnd="@dimen/blockers_button_margins">
+        <com.squareup.cash.mooncake.components.SplitButtons android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</merge>

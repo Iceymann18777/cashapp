@@ -1,0 +1,52 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/lending/show_borrow_instrument.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.lending;
+
+// Event representing a client decision to hide or show the Borrow instrument
+message ShowBorrowInstrument {
+  // Whether a CreditLine sync entity was present on the client
+  optional bool credit_line_present = 1;
+
+  // Client representation of the cached LendingConfig
+  optional LendingConfig lending_config = 2;
+
+  // Reason the client determined the LendingConfig to be invalid
+  optional InvalidConfigReason invalid_config_reason = 3;
+
+  // Source of this event within the app
+  optional string source = 4;
+
+  // Client representation of the cached LendingConfig.
+  message LendingConfig {
+    // Whether the client should supress Lending
+    optional bool enabled = 1;
+  
+    // Client scenario to open when tapping on Borrow
+    optional string instrument_client_scenario = 2;
+  
+    // Client scenario to open when the client is resolving deep links into Lending
+    optional string deep_link_client_scenario = 3;
+  
+    // Seconds from the epoch of when the cached config expires
+    optional int32 expiry = 4;
+  
+    // Version the app was on when the config was cached
+    optional string app_version = 5;
+  }
+
+  enum InvalidConfigReason {
+    // No LendingConfig was cached on the client
+    MISSING = 1;
+    // Cached LendingConfig has expired
+    EXPIRED = 2;
+    // Version of the app was changed
+    VERSION = 3;
+    // Parsing the cached data failed
+    FAILED = 4;
+    // Attempted to call GetLendingConfig, but had a network failure
+    NETWORK = 5;
+  }
+}

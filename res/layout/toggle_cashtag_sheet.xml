@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.card.onboarding.ToggleCashtagSheet android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.SwitchCompat android:textSize="18.0sp" android:textColor="@color/standard_black_normal" android:id="@id/cashtag_switch" android:paddingTop="@dimen/card_studio_cashtag_sheet_padding_top" android:paddingBottom="@dimen/card_studio_cashtag_sheet_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/toggle_cashtag" android:fontFamily="@font/cashmarket_regular" android:paddingStart="@dimen/card_studio_cashtag_sheet_padding_width" android:paddingEnd="@dimen/card_studio_cashtag_sheet_padding_width" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/title" app:layout_constraintTop_toTopOf="parent" />
+</com.squareup.cash.card.onboarding.ToggleCashtagSheet>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/compound_setting_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text_container" android:paddingTop="@dimen/profile_item_padding_vertical" android:paddingBottom="@dimen/profile_item_padding_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:id="@id/description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/profile_item_description_gap" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/button_container" android:paddingTop="@dimen/profile_item_padding_vertical" android:paddingBottom="@dimen/profile_item_padding_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/profile_item_padding_side" android:paddingEnd="@dimen/profile_item_padding_side" />
+</LinearLayout>

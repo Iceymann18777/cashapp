@@ -1,0 +1,32 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/submit_card_studio_customization.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when clicks submit on card preview screen
+message SubmitCardStudioCustomization {
+  optional bool has_customization = 1;
+
+  optional bool cashtag_enabled = 2;
+
+  optional int32 stroke_count = 3;
+
+  optional int32 stamp_count = 4;
+
+  optional Result result = 5;
+
+  optional string theme_token = 6;
+
+  optional string flow_token = 7;
+
+  optional string client_scenario = 8;
+
+  // The network status after the customer submits.
+  enum Result {
+    HTTP_FAILURE = 1;
+    NETWORK_FAILURE = 2;
+    SUCCESS = 3;
+  }
+}

@@ -1,0 +1,11 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardupsell/view_card_upsell_legacy_screen.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardupsell;
+
+// Triggers when customer is shown Card Tab Null State Upsell Legacy Video Screen
+message ViewCardUpsellLegacyScreen {
+  optional string treatment = 1;
+}

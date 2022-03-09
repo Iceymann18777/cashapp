@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.profile.views.ProfileMiscellaneousSection android:orientation="vertical" android:id="@id/profile_miscellaneous_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/profile_footer_buttons_margin_top" android:layout_marginBottom="@dimen/profile_footer_buttons_margin_bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/reward_code" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" />
+    <Button android:id="@id/sign_out" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_sign_out" android:fontFamily="@font/cashmarket_medium" />
+</com.squareup.cash.profile.views.ProfileMiscellaneousSection>

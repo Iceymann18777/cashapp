@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.StatusResultView android:id="@id/blocker_button_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/blocker_button_container_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Space android:layout_width="fill_parent" android:layout_height="@dimen/blockers_padding" />
+                <FrameLayout android:id="@id/icon_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="bottom|center" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+                </FrameLayout>
+                <com.squareup.cash.ui.widget.TextSwapper android:gravity="center|top" android:id="@id/text" android:paddingTop="@dimen/blockers_icon_text_gap" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/blockers_padding" android:layout_weight="1.0" android:lineSpacingMultiplier="1.2" android:paddingStart="@dimen/blockers_padding" android:paddingEnd="@dimen/blockers_padding" style="?blockersTitleStyle" />
+                <View android:id="@id/promo_divider_top" android:background="?statusResultPromoDividerColor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <com.squareup.cash.ui.widget.text.BalancedLineTextView android:theme="@style/Theme.Cash.Default.Accent" android:textAppearance="@style/TextAppearance.Cash.Instructions" android:textColor="?android:textColorPrimary" android:gravity="center" android:id="@id/promo" android:paddingTop="@dimen/blockers_padding" android:paddingBottom="@dimen/blockers_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip" android:paddingStart="@dimen/blockers_padding" android:paddingEnd="@dimen/blockers_padding" />
+            </LinearLayout>
+            <FrameLayout android:layout_gravity="bottom" android:id="@id/reward_status_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <com.squareup.cash.mooncake.components.SplitButtons android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+    </LinearLayout>
+</com.squareup.cash.blockers.views.StatusResultView>

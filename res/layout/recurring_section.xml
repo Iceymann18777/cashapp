@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.instruments.views.RecurringSection android:orientation="vertical" android:id="@id/profile_recurring_section" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/recurring_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/section_recurring_header" style="@style/Widget.Cash.SectionHeader" />
+    <com.squareup.cash.ui.widget.SwitchSettingView android:id="@id/enable_recurring_transfers" android:layout_width="fill_parent" android:layout_height="wrap_content" app:description="@string/recurring_transfer_preference_description" app:title="@string/recurring_transfer_preference" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/frequency_section" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/frequency_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/recurring_transfer_frequency" android:layout_weight="1.0" android:fontFamily="@font/cashmarket_medium" style="@style/Widget.Cash.Profile.Item" />
+        <TextView android:textAppearance="@style/TextAppearance.Cash.Badge" android:id="@id/frequency_value" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recurring_transfer_default_value" android:layout_marginEnd="@dimen/profile_item_padding_side" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/amount_section" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/amount_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/recurring_transfer_amount" android:layout_weight="1.0" android:fontFamily="@font/cashmarket_medium" style="@style/Widget.Cash.Profile.Item" />
+        <TextView android:textAppearance="@style/TextAppearance.Cash.Badge" android:id="@id/amount_value" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recurring_transfer_default_value" android:layout_marginEnd="@dimen/profile_item_padding_side" />
+    </LinearLayout>
+</com.squareup.cash.instruments.views.RecurringSection>

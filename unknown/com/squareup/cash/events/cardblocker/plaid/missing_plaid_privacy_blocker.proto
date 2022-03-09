@@ -1,0 +1,27 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardblocker/plaid/missing_plaid_privacy_blocker.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardblocker.plaid;
+
+// Missing Plaid Privacy Blocker
+// 
+// Triggered when we try to show Plaid without a privacy_blocker in
+// the OAuthConfig and falling back to Manual ACH.
+message MissingPlaidPrivacyBlocker {
+  // The un-prefixed ClientScenario enum from squareup.franklin.app protos.
+  // (i.e. PAYMENT_FLOW, ONBOARDING, PROFILE, etc.)
+  optional string client_scenario = 1;
+
+  // The unique flow token given to every flow.
+  optional string flow_token = 2;
+
+  // The source of the OAuthConfig.
+  optional OAuthConfigSource source = 3;
+
+  enum OAuthConfigSource {
+    CARD_BLOCKER_SUPPLEMENT = 1;
+    APP_CONFIG = 2;
+  }
+}

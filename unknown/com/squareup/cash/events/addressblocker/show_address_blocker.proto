@@ -1,0 +1,28 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/addressblocker/show_address_blocker.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.addressblocker;
+
+// Triggers when an address blocker is shown.
+message ShowAddressBlocker {
+  optional Type type = 1;
+
+  // Optional flow token of the address blocker.
+  optional string flow_token = 2;
+
+  // Optional client scenario of the address blocker.
+  optional string client_scenario = 3;
+
+  // Different types of address blockers.
+  enum Type {
+    FULL_ADDRESS = 1;
+    // Requires street address and postal code but not city and state
+    MINIMAL_ADDRESS = 2;
+    // Screen shown in the context of an identity-verification blocker
+    CONFIRM_IDV_ADDRESS = 3;
+    // Requires only postal code
+    POSTAL_CODE = 4;
+  }
+}

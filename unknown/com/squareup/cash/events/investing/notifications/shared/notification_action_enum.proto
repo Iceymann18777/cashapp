@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/investing/notifications/shared/notification_action_enum.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.investing.notifications.shared;
+
+// A notification action that was performed by the user.
+// A user can enable or disable each notification.
+enum NotificationAction {
+  // Notification was enabled.
+  ENABLE = 1;
+  // Notification was disabled.
+  DISABLE = 2;
+}

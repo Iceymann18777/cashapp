@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/show_style_picker.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when user enters card style picker.
+message ShowStylePicker {
+  optional bool has_customization = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+}

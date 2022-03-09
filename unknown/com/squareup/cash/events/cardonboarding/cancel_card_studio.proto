@@ -1,0 +1,23 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/cancel_card_studio.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when user clicks close
+message CancelCardStudio {
+  optional Screen screen = 1;
+
+  optional bool has_customization = 2;
+
+  optional string flow_token = 3;
+
+  optional string client_scenario = 4;
+
+  // The screen from which the customer exits.
+  enum Screen {
+    PREVIEW = 1;
+    STYLE_PICKER = 2;
+  }
+}

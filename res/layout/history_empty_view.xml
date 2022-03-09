@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.history.views.HistoryEmptyView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tabs_container" android:paddingTop="48.0dip" android:paddingBottom="48.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/content_spacing_small" android:paddingStart="44.0dip" android:paddingEnd="44.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+        <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="@string/history_empty_title_tabs" android:fontFamily="@font/cashmarket_medium" android:letterSpacing="0.01" />
+        <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textSize="14.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/history_empty_description_tabs" android:lineSpacingExtra="6.0dip" android:fontFamily="@font/cashmarket_regular" android:letterSpacing="0.02" />
+    </LinearLayout>
+    <include android:id="@id/history_empty_view_invite" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/content_spacing_small" layout="@layout/activity_invite" />
+</com.squareup.cash.history.views.HistoryEmptyView>

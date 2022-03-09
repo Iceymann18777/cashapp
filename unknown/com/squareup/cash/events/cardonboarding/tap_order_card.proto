@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/tap_order_card.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when user clicks on order card
+message TapOrderCard {
+  optional bool has_customization = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+}

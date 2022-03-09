@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.profile.views.ProfileSecurityView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.squareup.cash.mooncake.components.MooncakeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/action_bar_close" app:navigationIcon="?actionBarCloseIcon" app:title="@string/profile_privacy_and_security_title" app:titleTextAppearance="@style/TextAppearance.Cash.Toolbar.Tabs" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/passcode_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_section_security" style="@style/Widget.Cash.SectionHeader" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/profile_passcode_section" />
+            <TextView android:id="@id/cash_me_header" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.SectionHeader" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.squareup.cash.ui.widget.SwitchSettingView android:id="@id/cash_me_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" app:title="@string/profile_cash_app_title" />
+            </LinearLayout>
+            <TextView android:id="@id/profile_incoming_requests_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_incoming_requests_header" style="@style/Widget.Cash.SectionHeader" />
+            <LinearLayout android:orientation="vertical" android:id="@id/profile_incoming_requests_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle">
+                <com.squareup.cash.ui.widget.SwitchSettingView android:id="@id/incoming_requests_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:description="@string/profile_incoming_requests_description" app:title="@string/profile_incoming_requests_title" />
+                <com.squareup.cash.profile.views.SelectableSettingView android:id="@id/allow_all_requests" android:layout_width="fill_parent" android:layout_height="wrap_content" app:description="Allow All" />
+                <com.squareup.cash.profile.views.SelectableSettingView android:id="@id/allow_contacts_requests" android:layout_width="fill_parent" android:layout_height="wrap_content" app:description="Contacts Only" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/profile_footer_buttons_margin_top" android:layout_marginBottom="@dimen/profile_footer_buttons_margin_bottom">
+                <Button android:id="@id/change_passcode" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_change_passcode" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.squareup.cash.profile.views.ProfileSecurityView>

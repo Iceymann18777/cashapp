@@ -1,0 +1,43 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/homescreen/tap_support_flow_node.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.homescreen;
+
+// Tap Support Flow Node
+// 
+// Event Description:
+// The customer taps on an help article title.
+// 
+// Point of Trigger:
+// Immediately after customer taps on the article title,
+// before the support flow screen is displayed.
+// 
+// Only fires for "top level" navigation taps (i.e. does not fire for
+// further navigation in the nodes) however, this event can fire multiple times
+// within a given flow "session" if a person taps on multiple top-level nodes.
+message TapSupportFlowNode {
+  // Client generated unique identifier per Support Home session
+  optional string flow_token = 1;
+
+  // Unique identifier of the support flow node.
+  optional string node_token = 2;
+
+  // Indicate if chat is available when customer taps the article.
+  optional bool is_chat_available = 3;
+
+  // Indicate if the customer has an active chat session. Null if chat is not available.
+  optional bool has_active_chat = 4;
+
+  // Indicate if customer service is online and available. Value comes directly
+  // from the SupportChatStatusResponse.
+  // https://prototype.sqprod.co/#/docs/
+  //   \ squareup.cash.supportal.app.SupportChatStatusResponse
+  // 
+  // Null if chat is not available.
+  optional bool is_customer_service_available = 5;
+
+  // Indicate if there is any incidents when customer taps the article
+  optional bool has_incident = 6;
+}

@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/investing/notifications/shared/stock_type_enum.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.investing.notifications.shared;
+
+// Stock type of a triggered notification. We can adjust
+// notifications for owned or followed stocks.
+enum StockType {
+  // User triggerred notifications for owned stocks.
+  OWN = 1;
+  // User triggerred notifications for followed stocks.
+  FOLLOW = 2;
+}

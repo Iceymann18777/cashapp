@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/lending/tap_borrow.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.lending;
+
+message TapBorrow {
+  optional Source source = 1;
+
+  enum Source {
+    CREDIT_LINE = 1;
+    FIRST_TIME = 2;
+  }
+}

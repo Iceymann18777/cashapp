@@ -1,0 +1,21 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/release_3d_card.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when 3D card is released
+message Release3dCard {
+  optional Side side = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+
+  // The side on which 3D card settles after releasing.
+  enum Side {
+    FRONT = 1;
+    BACK = 2;
+  }
+}

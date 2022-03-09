@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.MainTabbedScreensContainer android:id="@id/main_tabbed_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/main_tab_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.material.tabs.TabLayout android:theme="@style/Theme.Cash.Default.Accent.Tabs" android:layout_gravity="bottom" android:id="@id/main_tab_layout" android:layout_width="fill_parent" android:layout_height="@dimen/tab_tablayout_height" app:tabGravity="fill" app:tabIconTint="?tabIndicatorStripColor" app:tabIndicatorColor="?android:textColorPrimary" app:tabIndicatorFullWidth="false" app:tabIndicatorGravity="top" app:tabIndicatorHeight="0.0dip" app:tabMode="fixed" app:tabPaddingEnd="0.0dip" app:tabPaddingStart="0.0dip" app:tabRippleColor="@null" app:tabTextAppearance="@style/TextAppearance.Cash.Tab" />
+    <com.squareup.cash.appmessages.views.InAppNotificationView android:layout_gravity="top" android:id="@id/in_app_notification" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.squareup.cash.ui.MainTabbedScreensContainer>

@@ -1,0 +1,16 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/formblocker/tap_form_blocker_clear_address_input.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.formblocker;
+
+// Triggered when the customer taps the clear button to empty out the address
+// input field.
+message TapFormBlockerClearAddressInput {
+  // Optional flow token of the form blocker.
+  optional string flow_token = 1;
+
+  // Optional client scenario of the form blocker.
+  optional string client_scenario = 2;
+}

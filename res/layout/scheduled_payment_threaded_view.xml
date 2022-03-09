@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.profile.ScheduledPaymentThreadedView android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/action_bar_close" app:navigationIcon="?actionBarCloseIcon" app:title="Electric Bill" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/profile_footer_buttons_margin_bottom" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:background="@color/background_gray_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/upcoming_payment_section_label" style="@style/Widget.Cash.SectionHeader" />
+            <LinearLayout android:orientation="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Profile.Section">
+                <com.squareup.cash.ui.profile.ScheduledPaymentThreadedViewRow android:id="@id/upcoming_scheduled_row" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="80.0dip" />
+            </LinearLayout>
+            <TextView android:background="@color/background_gray_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/completed_payment_section_label" style="@style/Widget.Cash.SectionHeader" />
+            <LinearLayout android:orientation="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Profile.Section">
+                <com.squareup.cash.ui.profile.ScheduledPaymentThreadedViewRow android:id="@id/completed_scheduled_row" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="80.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.squareup.cash.ui.profile.ScheduledPaymentThreadedView>

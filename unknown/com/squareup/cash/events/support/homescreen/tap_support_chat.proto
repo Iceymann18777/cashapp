@@ -1,0 +1,41 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/homescreen/tap_support_chat.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.homescreen;
+
+// Tap Support Chat
+// 
+// Event Description:
+// The customer taps on the call to action.
+// 
+// Point of Trigger:
+// 1. When customer taps the message banner on the Messaging Module
+//    at the top of the screen.
+// 2. When the customer taps the "Start a chat" or "Return to chat" button
+//    on the Contact Module at the bottom of the screen.
+message TapSupportChat {
+  // Client generated unique identifier per Support Home session
+  optional string flow_token = 1;
+
+  // The trigger for tap action.
+  optional Trigger trigger = 2;
+
+  // Indicate if the customer has an active chat
+  optional bool has_active_chat = 3;
+
+  // Indicate if our customer service is online
+  optional bool is_customer_service_available = 4;
+
+  // Indicate if there is any incidents when customer open chat
+  optional bool has_incident = 5;
+
+  // Possible trigger for the tap action.
+  // MESSAGING_MODULE - Top module with title "You have a message"
+  // CONTACT_MODULE - Bottom module with title "Still need help?"
+  enum Trigger {
+    MESSAGING_MODULE = 1;
+    CONTACT_MODULE = 2;
+  }
+}

@@ -1,0 +1,13 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardcontrols/enable_card.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardcontrols;
+
+// This event triggers when the customer enables their card.
+message EnableCard {
+  optional string flow_token = 1;
+
+  optional string client_scenario = 2;
+}

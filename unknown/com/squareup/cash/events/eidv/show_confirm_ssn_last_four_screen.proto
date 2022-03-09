@@ -1,0 +1,11 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/eidv/show_confirm_ssn_last_four_screen.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.eidv;
+
+// Show Confirm SSN Last Four Screen
+// 
+// Triggered when the Confirm SSN Last Four screen is shown during IDV.
+message ShowConfirmSSNLastFourScreen {}

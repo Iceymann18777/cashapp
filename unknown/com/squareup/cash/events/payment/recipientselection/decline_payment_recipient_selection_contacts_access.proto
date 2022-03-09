@@ -1,0 +1,30 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/recipientselection/decline_payment_recipient_selection_contacts_access.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.recipientselection;
+
+import "com/squareup/cash/events/payment/shared/payment_type_enum.proto";
+
+// Triggers when a customer declines contact access in the
+// payment recipient selector.
+message DeclinePaymentRecipientSelectionContactsAccess {
+  // The preselected payment type
+  optional com.squareup.cash.events.payment.shared.PaymentType payment_type = 1;
+
+  // The specific reason why Contact Access was denied.
+  optional DeclineReason reason = 2;
+
+  // The specific reason why Contact Access was denied.
+  enum DeclineReason {
+    // The user dismissed the initial prompt for access
+    // and has not been shown the OS-level access prompt.
+    DEFERRED = 1;
+    // The user accepted the initial prompt, but denied OS-level access.
+    DENIED = 2;
+    // The user cannot change this application’s status, possibly due to
+    // active restrictions such as parental controls being in place
+    RESTRICTED = 3;
+  }
+}

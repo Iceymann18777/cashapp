@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" class="com.squareup.cash.payments.views.BillView"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <view android:layout_gravity="center" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxWidth="90.0dip" app:aspectRatio="0.67" class="com.squareup.cash.payments.views.BillConstraintLayout">
+        <TextView android:textSize="28.0sp" android:textColor="@color/bright_green_normal" android:gravity="center" android:id="@id/available" android:background="@drawable/reward_status_bill_available_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fontFamily="@font/cashmarket_medium" />
+        <ImageView android:id="@id/complete" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/reward_status_bill_complete" android:contentDescription="@string/reward_status_bill_complete_description" />
+    </view>
+</view>

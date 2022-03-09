@@ -1,0 +1,13 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/close_card_customization_stamp_sheet.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when a stamp sheet is closed
+message CloseCardCustomizationStampSheet {
+  optional string flow_token = 1;
+
+  optional string client_scenario = 2;
+}

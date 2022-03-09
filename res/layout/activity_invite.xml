@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.history.views.ActivityInviteView android:textAppearance="@style/TextAppearance.Cash.Subtext" android:gravity="center_horizontal" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/content_spacing_medium" android:paddingBottom="@dimen/content_spacing_medium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableTop="@drawable/referrals_icon_invite_button" android:drawablePadding="@dimen/content_spacing_xsmall" android:paddingStart="@dimen/list_gutter" android:paddingEnd="@dimen/list_gutter"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

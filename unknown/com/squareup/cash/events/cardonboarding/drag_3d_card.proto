@@ -1,0 +1,13 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/drag_3d_card.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when 3D card is dragged
+message Drag3dCard {
+  optional string flow_token = 1;
+
+  optional string client_scenario = 2;
+}

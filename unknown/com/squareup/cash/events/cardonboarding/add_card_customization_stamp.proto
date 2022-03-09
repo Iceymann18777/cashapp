@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/add_card_customization_stamp.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when a stamp is added
+message AddCardCustomizationStamp {
+  optional string stamp_token = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+}

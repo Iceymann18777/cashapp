@@ -1,0 +1,16 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/watchdog/blocked_main_thread.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.watchdog;
+
+// Triggers when the Watchdog detects that the main thread has been blocked for an extended duration.
+message BlockedMainThread {
+  // Field 1 is reserved.
+  // PLCrashReport data formatted as a base64 encoded string.
+  optional string pl_crash_report_data = 2;
+
+  // The duration of the blockage in milliseconds.
+  optional int32 duration_ms = 3;
+}

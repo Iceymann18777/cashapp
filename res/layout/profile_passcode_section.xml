@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.profile.views.ProfilePasscodeSection android:orientation="vertical" android:id="@id/passcode_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Profile.Section"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.squareup.cash.ui.widget.SwitchSettingView android:id="@id/passcode_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" app:title="@string/profile_passcode_title" />
+</com.squareup.cash.profile.views.ProfilePasscodeSection>

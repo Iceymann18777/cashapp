@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/eidv/confirm_ssn_last_four_network_error.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.eidv;
+
+// Confirm SSN Last Four Network Error
+// 
+// Triggered any time the customer encounters a network error on the IDV Confirm
+// SSN Last Four screen.
+message ConfirmSSNLastFourNetworkError {}

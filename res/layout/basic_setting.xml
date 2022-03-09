@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/basic_setting_container" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/profile_item_padding_vertical" android:paddingBottom="@dimen/profile_item_padding_vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/profile_item_padding_side" android:paddingEnd="@dimen/profile_item_padding_side"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Cash.Cell" android:textColor="?android:textColorPrimary" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" />
+    <TextView android:textAppearance="@style/TextAppearance.Cash.Subtext" android:textColor="?android:textColorSecondary" android:id="@id/description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/profile_item_description_gap" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardblocker/plaid/tap_plaid_privacy_continue.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardblocker.plaid;
+
+// Tap Plaid Privacy Continue
+// 
+// Triggered when the customer taps continue on the privacy screen
+message TapPlaidPrivacyContinue {
+  // The un-prefixed ClientScenario enum from squareup.franklin.app protos.
+  // (i.e. PAYMENT_FLOW, ONBOARDING, PROFILE, etc.)
+  optional string client_scenario = 1;
+
+  // The unique flow token given to every flow.
+  optional string flow_token = 2;
+}

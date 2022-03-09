@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/hairline_gray_normal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape>
+            <corners android:radius="6.0dip" />
+            <solid android:color="@color/standard_white_normal" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="6.0dip" />
+            <solid android:color="@color/standard_white_normal" />
+            <stroke android:width="0.5dip" android:color="@color/hairline_gray_normal" />
+        </shape>
+    </item>
+</ripple>

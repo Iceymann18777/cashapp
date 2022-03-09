@@ -1,0 +1,29 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/threeds/send_three_ds_web_challenge_redirect_request.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.threeds;
+
+// Send Three DS Web Challenge Redirect Request
+// 
+// Event Description: 
+// The client app sends the (unopened) result payload of the 3DS challenge to
+// Cash’s servers. Basically when Cash App sends data for 3DS challenge
+// evaluation.
+// 
+// Point of Trigger: 
+// When customer completes and submits the 3DS challenge OR a non-interactive
+// challenge automatically completes and sends data for evaluation.
+// 
+// Related Screen: 
+// ThreeDs Blocker, upon completion of interaction with bank.
+// 
+// Related Metric(s) and Dimension(s): Load Time, 3DS Volume and Rates/Funnel
+message SendThreeDSWebChallengeRedirectRequest {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+}

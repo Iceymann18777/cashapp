@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/eidv/confirm_full_ssn_network_error.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.eidv;
+
+// Confirm Full SSN Network Error
+// 
+// Triggered any time the customer encounters a network error on the IDV Confirm
+// Full SSN screen.
+message ConfirmFullSSNNetworkError {}

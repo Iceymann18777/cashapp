@@ -1,0 +1,32 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/govtid/view_govt_id_front_detected.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv.govtid;
+
+// View Govt Id Front Detected
+// 
+// Event Description:
+// After card scanning detects a card and a face before client
+// presents Retake and Use Photo options.
+// 
+// Point of Trigger:
+// Customer successfully scans the front of their card.
+message ViewGovtIdFrontDetected {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Amount of time it took to capture this side of the ID in ms,
+  // including retakes
+  optional int32 capture_time_ms = 2;
+
+  // width of image passed to the scanner
+  optional int32 image_width = 3;
+
+  // height of image passed to the scanner
+  optional int32 image_height = 4;
+
+  // A field for reporting different experiment treatments. (i.e. mitek vs control)
+  optional string treatment = 5;
+}

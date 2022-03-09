@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.profile.views.ProfileNotificationsView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.squareup.cash.mooncake.components.MooncakeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:title="@string/profile_notifications_title" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/profile_footer_buttons_margin_bottom" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/notifications_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_section_notifications" style="@style/Widget.Cash.SectionHeader" />
+            <com.squareup.cash.profile.views.ProfileNotificationsSection android:orientation="vertical" android:id="@id/profile_notifications_section" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@id/messages_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_section_app_messages" style="@style/Widget.Cash.SectionHeader" />
+            <com.squareup.cash.profile.views.ProfileMessagesSection android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</com.squareup.cash.profile.views.ProfileNotificationsView>

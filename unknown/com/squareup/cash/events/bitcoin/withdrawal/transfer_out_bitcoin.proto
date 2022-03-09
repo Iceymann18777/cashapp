@@ -1,0 +1,47 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/bitcoin/withdrawal/transfer_out_bitcoin.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.bitcoin.withdrawal;
+
+import "com/squareup/cash/events/bitcoin/bitcoin_transfer_source.proto";
+
+// Triggered when the user attempts to transfer out (withdrawal of) Bitcoin.
+// The user may or may not have been successful in the operation.
+message TransferOutBitcoin {
+  // Transfer out status from server when attempt was made
+  optional string transfer_out_status = 1;
+
+  // Transfer in status from server when attempt was made
+  optional string transfer_in_status = 2;
+
+  // Transfer out text when attempt was made
+  optional string transfer_out_text = 3;
+
+  // Transfer in text when attempt was made
+  optional string transfer_in_text = 4;
+
+  // Status of the attempt
+  optional Status status = 5;
+
+  // Source of the attempt
+  optional com.squareup.cash.events.bitcoin.BitcoinTransferSource source = 6;
+
+  // Whether P2P is enabled when attempt was made
+  optional bool is_p2p_enabled = 7;
+
+  // Status of the transfer out attempt
+  enum Status {
+    // Can't withdraw because client is currently in invalid state that is not handled.
+    ILLEGAL_STATE = 1;
+    // Withdraw flow successfully initiated.
+    SUCCESS = 2;
+    // User can't withdraw because no btc balance exists. Happens when BTC is disabled for the current market.
+    BALANCE_MISSING = 3;
+    // User can't withdraw if balance is zero.
+    ZERO_BALANCE = 4;
+    // User can't withdraw because kill switch flag is switched on.
+    OPERATION_DISABLED = 5;
+  }
+}

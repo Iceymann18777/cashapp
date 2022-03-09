@@ -1,0 +1,9 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/recipientsearch/grant_recipient_search_contacts_access.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.recipientsearch;
+
+// When a customer approves contact access from recipient search screen.
+message GrantRecipientSearchContactsAccess {}

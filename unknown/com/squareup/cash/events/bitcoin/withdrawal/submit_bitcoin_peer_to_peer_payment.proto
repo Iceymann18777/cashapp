@@ -1,0 +1,34 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/bitcoin/withdrawal/submit_bitcoin_peer_to_peer_payment.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.bitcoin.withdrawal;
+
+// Triggered when the user taps next after selecting a P2P recipient
+// in the Bitcoin Recipients screen. Event is logged after recieving a callback
+// from the initiate-payment service call. This happens before the confirmation
+// page and payment flow; therefore a success status does not indicate 
+// a completed payment, only a successfully initiated payment flow.
+message SubmitBitcoinPeerToPeerPayment {
+  // Whether the server call succeeds or fails
+  optional Status status = 1;
+
+  // The unique flow token given to every flow.
+  optional string flow_token = 2;
+
+  // The amount in sats/cents.
+  optional int64 amount = 3;
+
+  // The amount currency.
+  optional string amount_currency = 4;
+
+  // Is external wallet withdrawal enabled.
+  optional bool is_external_wallet_withdrawal_enabled = 5;
+
+  // Status of the server call
+  enum Status {
+    SUCCESS = 1;
+    FAILURE = 2;
+  }
+}

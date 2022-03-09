@@ -1,0 +1,23 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/bitcoin/bitcoin_transfer_source.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.bitcoin;
+
+// Bitcoin transfer source
+enum BitcoinTransferSource {
+  // Transfer initiated from Balance tab
+  BALANCE = 1;
+  // Transfer initiated from Investing tab
+  INVESTING = 2;
+  // Transfer initiated from a deposit reversal.
+  DEPOSIT_REVERSAL = 3;
+  // Transfer initiated from a deep link
+  DEEP_LINK = 4;
+  // Transfer initiated from Android main QR Code scanner
+  // iOS will report these events as DEEP_LINK
+  MAIN_SCANNER = 5;
+  // Transfer initiated from Home tab's main payment pad
+  MAIN_PAYMENT_PAD = 6;
+}

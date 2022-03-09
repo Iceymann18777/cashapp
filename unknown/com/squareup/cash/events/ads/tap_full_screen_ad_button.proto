@@ -1,0 +1,13 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/ads/tap_full_screen_ad_button.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.ads;
+
+// Triggers when customer taps a button on a full-screen ad
+message TapFullScreenAdButton {
+  optional string ad_experiment_token = 1;
+
+  optional string button_type = 2;
+}

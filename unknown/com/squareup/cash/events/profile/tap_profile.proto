@@ -1,0 +1,19 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/profile/tap_profile.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.profile;
+
+// Triggers when customer taps on the profile icon.
+message TapProfile {
+  optional Tab origin_tab = 1;
+
+  enum Tab {
+    BANKING = 1;
+    CARD = 2;
+    NETWORK = 3;
+    INVESTING = 4;
+    ACTIVITY = 5;
+  }
+}

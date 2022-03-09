@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/contacts/send_sync_contacts_request.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.contacts;
+
+// Measures the size of the SyncContacts request.
+message PerformSyncContactsRequest {
+  // Removed the int64 version of contacts_size_bytes since our events infra doesn't support it
+  reserved 1;
+
+  // How large was the sync hashed aliases request
+  optional int32 sync_hashed_aliases_request_size_bytes = 2;
+}

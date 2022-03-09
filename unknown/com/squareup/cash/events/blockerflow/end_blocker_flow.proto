@@ -1,0 +1,61 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/blockerflow/end_blocker_flow.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.blockerflow;
+
+// Triggers when a flow is ended. This can be from completing the flow,
+// cancelling, or abandoning it.
+message EndBlockerFlow {
+  // How a flow was ended.
+  optional ExitStatus exit_status = 1;
+
+  // The un-prefixed StatusResult.Icon enum from squareup.franklin protos.
+  // (i.e. SUCCESS, INSTANT, BANK, etc.)
+  // Note: This value just represents what we are showing to
+  // the customer at the end of a flow, but does not map perfectly to
+  // more granular failure reasons that aren't give to the client.
+  // Additionally: StatusResults are being phased out and replaced
+  // with a generic Form Blocker going forward.
+  optional string status_result = 2;
+
+  // The un-prefixed ClientScenario enum from squareup.franklin.app protos.
+  // (i.e. PAYMENT_FLOW, ONBOARDING, PROFILE, etc.)
+  optional string client_scenario = 3;
+
+  // The unique flow token given to every flow.
+  optional string flow_token = 4;
+
+  // A "->" delimited list of blocker_ids, including repeats.
+  // This list is built over the course of a flow as new blockers
+  // are presented to the customer.
+  optional string final_path = 5;
+
+  // A "->" delimited list of blocker_ids, excluding repeats.
+  optional string unique_final_path = 6;
+
+  // The last blocker_id that was shown to the customer.
+  optional string last_blocker_id = 7;
+
+  // The time spent in this flow in milliseconds.
+  // Measured by subtracting the current time from
+  // a start time recorded at the beginning of the flow.
+  optional int32 flow_duration_ms = 8;
+
+  enum ExitStatus {
+    // User-Initiated. When the user explicitly chooses to exit out
+    // of a flow early. Typically from a cancel button on a blocker.
+    CANCELLED = 1;
+    // User-Initiated. Typically at the end of a flow from a StatusResult
+    // or BlockerAction.EndFlow.
+    FINISHED = 2;
+    // Developer-Initiated. Bailing out of the flow early from a error in
+    // the flow.
+    FAILED = 3;
+    // Customer backgrounded the app during a flow
+    // and the app was purged from memory.
+    // Only available on iOS.
+    ABANDONED = 4;
+  }
+}

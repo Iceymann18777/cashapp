@@ -1,0 +1,24 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/chat/tap_support_message_error.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.chat;
+
+// Tap Support Message Error
+// 
+// Event Description:
+// The customer taps on a message error indicator
+message TapSupportMessageError {
+  // Action taken on a message that failed to send
+  optional Action action = 1;
+
+  enum Action {
+    // Taps on indicator to see more options
+    OPTIONS = 1;
+    // Taps on retry to resend the message
+    RETRY = 2;
+    // Taps on delete to remove the message
+    DELETE = 3;
+  }
+}

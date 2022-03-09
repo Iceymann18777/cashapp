@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.card.onboarding.CardStyleView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.squareup.cash.card.onboarding.StylePickerView android:id="@id/style_picker_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.squareup.cash.card.onboarding.CardStyleView>

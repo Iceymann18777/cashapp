@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.squareup.cash.mooncake.components.MooncakeToolbar android:id="@id/support_article_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:id="@id/support_article_scroll_view" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:id="@id/support_article_scroll_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.squareup.cash.ui.widget.image.AvatarView2 android:id="@id/support_article_icon" android:visibility="gone" android:layout_width="@dimen/support_avatar_size" android:layout_height="@dimen/support_avatar_size" android:layout_marginTop="@dimen/support_avatar_padding_top" android:layout_marginBottom="@dimen/support_avatar_padding_bottom" android:importantForAccessibility="no" android:layout_marginStart="@dimen/support_padding_start" style="?avatarMediumStyle" />
+            <TextView android:textAppearance="@style/TextAppearance.Cash.Support.Title" android:id="@id/support_article_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.1" android:layout_marginStart="@dimen/support_padding_start" android:layout_marginEnd="@dimen/support_headline_padding_end" />
+            <TextView android:textAppearance="@style/TextAppearance.Cash.Support.Body" android:textColor="?android:textColorPrimary" android:id="@id/support_article_text" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="@dimen/support_text_padding_top" android:layout_weight="1.0" android:lineSpacingMultiplier="1.2" android:textIsSelectable="true" android:layout_marginStart="@dimen/support_padding_end" android:layout_marginEnd="@dimen/support_padding_start" />
+            <com.squareup.cash.support.views.SupportOptionsView android:id="@id/support_article_options" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/support_options_padding_top" />
+        </LinearLayout>
+    </ScrollView>
+</merge>

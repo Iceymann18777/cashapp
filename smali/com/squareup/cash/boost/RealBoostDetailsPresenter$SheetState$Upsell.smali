@@ -1,0 +1,44 @@
+.class public final Lcom/squareup/cash/boost/RealBoostDetailsPresenter$SheetState$Upsell;
+.super Lcom/squareup/cash/boost/RealBoostDetailsPresenter$SheetState;
+.source "RealBoostDetailsPresenter.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/squareup/cash/boost/RealBoostDetailsPresenter$SheetState;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Upsell"
+.end annotation
+
+
+# static fields
+.field public static final INSTANCE:Lcom/squareup/cash/boost/RealBoostDetailsPresenter$SheetState$Upsell;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    new-instance v0, Lcom/squareup/cash/boost/RealBoostDetailsPresenter$SheetState$Upsell;
+
+    invoke-direct {v0}, Lcom/squareup/cash/boost/RealBoostDetailsPresenter$SheetState$Upsell;-><init>()V
+
+    sput-object v0, Lcom/squareup/cash/boost/RealBoostDetailsPresenter$SheetState$Upsell;->INSTANCE:Lcom/squareup/cash/boost/RealBoostDetailsPresenter$SheetState$Upsell;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, v0}, Lcom/squareup/cash/boost/RealBoostDetailsPresenter$SheetState;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    return-void
+.end method

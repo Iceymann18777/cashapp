@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/search_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.squareup.cash.mooncake.components.MooncakeEditText android:gravity="start" android:layout_gravity="center_vertical" android:id="@id/address_input" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/at_hint" android:lines="1" android:maxLength="@integer/at_character_limit" android:layout_weight="1.0" android:inputType="textCapWords|textNoSuggestions" android:imeOptions="actionGo" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/clear_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="20.0dip" app:srcCompat="@drawable/search_close" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/address_results" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <ScrollView android:layout_gravity="center_vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/confirm_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.squareup.cash.mooncake.components.MooncakeEditText android:id="@id/street_address_line_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/at_street_address_hint_line_1" android:maxLength="@integer/at_character_limit" android:inputType="textCapWords|textNoSuggestions" />
+            <com.squareup.cash.mooncake.components.MooncakeEditText android:id="@id/street_address_line_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/at_street_address_hint_line_2" android:maxLength="@integer/at_character_limit" android:inputType="textCapWords|textNoSuggestions" />
+            <com.squareup.cash.mooncake.components.MooncakeEditText android:id="@id/city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/at_city_hint" android:maxLength="@integer/at_character_limit" android:inputType="textCapWords|textNoSuggestions" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.squareup.cash.mooncake.components.MooncakeEditText android:id="@id/state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/at_state_hint_us" android:maxLength="@integer/at_character_limit" android:layout_weight="1.0" android:inputType="textCapWords|textNoSuggestions" />
+                <com.squareup.cash.mooncake.components.MooncakeEditText android:id="@id/postcode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/at_code_hint_us" android:maxLength="@integer/at_character_limit" android:layout_weight="1.0" android:inputType="textCapWords|textNoSuggestions" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</merge>

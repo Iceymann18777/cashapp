@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/signatureblocker/tap_signature_blocker_next_button.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.signatureblocker;
+
+// This event triggers when the customer taps Next on the Signature Blocker screen.
+message TapSignatureBlockerNextButton {
+  // Optional flow token of the signature blocker.
+  optional string flow_token = 1;
+
+  // Optional client scenario of the signature blocker.
+  optional string client_scenario = 2;
+}

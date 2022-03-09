@@ -1,0 +1,26 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/formblocker/tap_form_blocker_action.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.formblocker;
+
+import "com/squareup/cash/events/blockerflow/shared/analytics_blocker_action.proto";
+
+// Triggers when form blocker action takes place.
+message TapFormBlockerAction {
+  // Optional property that gets set when the BlockerAction == SUBMIT_ACTION.
+  optional string action_id = 1;
+
+  // Optional blocker descriptor ID of the form blocker.
+  optional string blocker_id = 2;
+
+  // Optional blocker action of the form blocker.
+  optional com.squareup.cash.events.blockerflow.shared.AnalyticsBlockerAction blocker_action = 3;
+
+  // Optional flow token of the form blocker.
+  optional string flow_token = 4;
+
+  // Optional client scenario of the form blocker.
+  optional string client_scenario = 5;
+}

@@ -1,0 +1,23 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/show_document_confirmation_screen.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv;
+
+// Show Document Confirmation Screen
+// 
+// Event Description: 
+// The screen allowing a customer to either retake or confirm the image of
+// the document they captured for d-IDV is shown.
+// 
+// Point of Trigger: 
+// The user either manually or the client app automatically captures an image
+// of the document.
+message ShowDocumentConfirmationScreen {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+}

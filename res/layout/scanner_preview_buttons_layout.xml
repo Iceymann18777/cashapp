@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.widget.JustifiedButtonContainer android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?blockersButtonBarStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textColor="@color/standard_white_normal" android:id="@id/sv_preview_retake_button_id" android:background="@drawable/button_background_black" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sv_preview_retake" android:layout_weight="1.0" style="?blockersButtonBarButtonStyle" />
+    <Button android:textColor="@color/standard_white_normal" android:id="@id/sv_preview_use_photo_button_id" android:background="@drawable/button_background_black" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sv_preview_use_photo" android:layout_weight="1.0" style="?blockersButtonBarButtonStyle" />
+</com.squareup.cash.ui.widget.JustifiedButtonContainer>

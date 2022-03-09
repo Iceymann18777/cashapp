@@ -1,0 +1,40 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/homescreen/show_support_home_screen.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.homescreen;
+
+// Show Support Home Screen
+// 
+// Event Description:
+// The Support Home screen is shown.
+// 
+// Point of Trigger:
+// When Support Home screen is loaded completely, including incidents,
+// articles and chat status and all content is displayed.
+message ShowSupportHomeScreen {
+  // Client generated unique identifier per Support Home session
+  optional string flow_token = 1;
+
+  // Indicate if chat is available on the home screen.
+  optional bool is_chat_available = 2;
+
+  // Indicate if the customer has an active chat session. Null if chat is not available.
+  optional bool has_active_chat = 3;
+
+  // Indicate if customer service is online and available. Null if chat is not available.
+  optional bool is_customer_service_available = 4;
+
+  // Indicate the number of incidents displayed on the home screen.
+  optional int32 number_of_incidents = 5;
+
+  // Comma separated list of incident ids displayed on the home screen.
+  optional string incident_ids = 6;
+
+  // Comma separated list of incident statuses displayed on the home screen.
+  // Please refer to Incident.Status proto definition for possible values
+  // https://prototype.sqprod.co/#/docs/
+  //   \ squareup.cash.supportal.incidents.Incident.Status
+  optional string incident_statuses = 7;
+}

@@ -1,0 +1,23 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/qrcodescanner/scan_card_qr_code.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.qrcodescanner;
+
+// Triggers when the card activation QR code scanner scans a new code
+message ScanCardQRCode {
+  // QR code category
+  optional Category category = 1;
+
+  // QR Code is considered valid if it can be read by Cash App
+  optional bool is_valid = 2;
+
+  // Different categories of QR codes
+  enum Category {
+    // QR code type was not recognized by the current version of the app.
+    UNSPECIFIED = 0;
+    // Card Activation URI
+    CARD_ACTIVATION = 1;
+  }
+}

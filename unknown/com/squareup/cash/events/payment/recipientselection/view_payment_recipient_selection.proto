@@ -1,0 +1,27 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/recipientselection/view_payment_recipient_selection.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.recipientselection;
+
+import "com/squareup/cash/events/payment/shared/payment_type_enum.proto";
+
+// Triggers when the payment recipient selector is presented.
+// "SCRecipientsViewController" - iOS
+// "payments/SendPaymentView" - Android
+message ViewPaymentRecipientSelection {
+  // The preselected payment type
+  optional com.squareup.cash.events.payment.shared.PaymentType payment_type = 1;
+
+  // The external_id that is sent in the InitiatePaymentRequest.
+  // This id is generated client-side and can be used to tie events
+  // that happen before a payment is created to server side payment events.
+  optional string external_id = 2;
+
+  // Whether the cashclient/use_cash_customer_search_service
+  // feature flag is enabled. This flag is read by both the clients and the
+  // server to determine whether to use the new search service backed by
+  // Elastic Search or the old franklin search.
+  optional bool use_cash_customer_search_service_enabled = 3;
+}

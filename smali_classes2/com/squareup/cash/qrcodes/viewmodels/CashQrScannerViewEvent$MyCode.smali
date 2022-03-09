@@ -1,0 +1,44 @@
+.class public final Lcom/squareup/cash/qrcodes/viewmodels/CashQrScannerViewEvent$MyCode;
+.super Lcom/squareup/cash/qrcodes/viewmodels/CashQrScannerViewEvent;
+.source "CashQrScannerViewModel.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/squareup/cash/qrcodes/viewmodels/CashQrScannerViewEvent;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "MyCode"
+.end annotation
+
+
+# static fields
+.field public static final INSTANCE:Lcom/squareup/cash/qrcodes/viewmodels/CashQrScannerViewEvent$MyCode;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    new-instance v0, Lcom/squareup/cash/qrcodes/viewmodels/CashQrScannerViewEvent$MyCode;
+
+    invoke-direct {v0}, Lcom/squareup/cash/qrcodes/viewmodels/CashQrScannerViewEvent$MyCode;-><init>()V
+
+    sput-object v0, Lcom/squareup/cash/qrcodes/viewmodels/CashQrScannerViewEvent$MyCode;->INSTANCE:Lcom/squareup/cash/qrcodes/viewmodels/CashQrScannerViewEvent$MyCode;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, v0}, Lcom/squareup/cash/qrcodes/viewmodels/CashQrScannerViewEvent;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    return-void
+.end method

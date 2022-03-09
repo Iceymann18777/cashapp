@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.profile.views.OpenSourceView android:id="@id/open_source" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="196.0dip" android:stateListAnimator="@animator/appbar_state_list_animator">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="?android:actionBarSize" app:layout_scrollFlags="exitUntilCollapsed|scroll|snap">
+            <com.squareup.cash.mooncake.components.MooncakeToolbar android:id="@id/toolbar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:elevation="0.0dip" app:navigationContentDescription="@string/action_bar_close" app:navigationIcon="?actionBarCloseIcon">
+                <Space android:id="@id/dummy_title" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.squareup.cash.mooncake.components.MooncakeToolbar>
+            <TextView android:textAppearance="@style/TextAppearance.Cash.Title" android:id="@id/title2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/open_source_title2" android:layout_centerInParent="true" />
+            <TextView android:textAppearance="@style/TextAppearance.Cash.Title" android:gravity="center_horizontal" android:id="@id/title1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="@string/open_source_title1" android:layout_above="@id/title2" android:layout_centerHorizontal="true" />
+            <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textAppearance="@style/TextAppearance.Cash.Subtext" android:gravity="center_horizontal" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/open_source_subtitle" android:layout_below="@id/title2" android:layout_centerHorizontal="true" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/projects" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.squareup.cash.profile.views.OpenSourceView>

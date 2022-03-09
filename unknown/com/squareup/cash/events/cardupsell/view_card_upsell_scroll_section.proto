@@ -1,0 +1,19 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardupsell/view_card_upsell_scroll_section.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardupsell;
+
+// Triggers when customer scrolls to section in Upsell Scroll Screen.
+// We expect an event to be emitted when ViewUpsellScrollScreen is sent,
+// for the screen initially shows the first section
+message ViewCardUpsellScrollSection {
+  // Provided by analytics_key in composer config proto for ScrollSection.
+  // Describes what is being shown on given section in
+  // Scroll Screen
+  optional string treatment = 1;
+
+  // Ranges from 0 to n-1 for n sections in Scroll Screen
+  optional int32 index = 2;
+}

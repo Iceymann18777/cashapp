@@ -1,0 +1,40 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/investing/customorder/custom_orders.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.investing.customorder;
+
+enum OrderSide {
+  BUY = 1;
+  SELL = 2;
+}
+
+// When a user select custom order from the Order Type screen.
+message SelectCustomOrder {
+  optional OrderSide order_side = 1;
+}
+
+// When a user tap on a range inside the custom order screen.
+message TapOnARangeInCustomOrder {
+  optional OrderSide order_side = 1;
+
+  optional Range range = 2;
+
+  enum Range {
+    ONE_DAY = 1;
+    ONE_WEEK = 2;
+    ONE_MONTH = 3;
+    ONE_YEAR = 4;
+  }
+}
+
+// When a user tap on `set` inside the custom order screen.
+message SetAPriceInCustomOrder {
+  optional OrderSide order_side = 1;
+}
+
+// When a user tap on the manual entry button inside custom order screen.
+message TapOnTheManualPriceEntryInCustomOrder {
+  optional OrderSide order_side = 1;
+}

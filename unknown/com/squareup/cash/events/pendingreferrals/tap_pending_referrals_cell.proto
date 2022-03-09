@@ -1,0 +1,9 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/pendingreferrals/tap_pending_referrals_cell.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.pendingreferrals;
+
+// Triggers when customer taps the pending referrals rollup cell
+message TapPendingReferralsRollupCell {}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.payments.views.recipients.RecipientsChipView android:textSize="@dimen/recipient_chip_text" android:textColor="@color/standard_black_normal" android:background="@drawable/recipients_chip_background" android:paddingTop="@dimen/recipient_chip_padding_vertical" android:paddingBottom="@dimen/recipient_chip_padding_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/recipient_chip_padding_horizontal" android:paddingEnd="@dimen/recipient_chip_padding_horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

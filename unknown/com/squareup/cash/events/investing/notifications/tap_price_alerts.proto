@@ -1,0 +1,19 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/investing/notifications/tap_price_alerts.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.investing.notifications;
+
+import "com/squareup/cash/events/investing/notifications/shared/notification_action_enum.proto";
+import "com/squareup/cash/events/investing/notifications/shared/notification_type_enum.proto";
+import "com/squareup/cash/events/investing/notifications/shared/stock_type_enum.proto";
+
+// Tap a price alert button from the Investing Notifications screen.
+message TapOnPriceAlertsInInvestingNotifications {
+  optional com.squareup.cash.events.investing.notifications.shared.NotificationType notification_type = 1;
+
+  optional com.squareup.cash.events.investing.notifications.shared.NotificationAction notification_action = 2;
+
+  optional com.squareup.cash.events.investing.notifications.shared.StockType stock_type = 3;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.profile.ProfileScheduledPaymentsView android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/action_bar_close" app:navigationIcon="?actionBarCloseIcon" app:title="@string/profile_scheduled_payments_button_label" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/scheduled_payments" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.squareup.cash.ui.profile.ProfileScheduledPaymentsView>

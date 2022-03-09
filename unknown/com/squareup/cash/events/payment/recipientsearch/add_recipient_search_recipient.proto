@@ -1,0 +1,39 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/recipientsearch/add_recipient_search_recipient.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.recipientsearch;
+
+import "com/squareup/cash/events/payment/shared/generation_strategy_enum.proto";
+
+// Triggers when a recipient in the list is added to the payment.
+message AddRecipientSearchRecipient {
+  // The user facing source of the recipient.
+  optional Bucket bucket = 1;
+
+  // The technical source of the recipient.
+  optional com.squareup.cash.events.payment.shared.GenerationStrategy generation_strategy = 2;
+
+  // The absolute index of the recipient with respect to the top of the list.
+  // The first item should be 0.
+  optional int32 absolute_index = 3;
+
+  // The total number of items in the list.
+  optional int32 total = 4;
+
+  // The length of the current search query.
+  // Note: We're logging this instead of the query itself because
+  // the query could contain PII (email or phone).
+  optional int32 query_length = 5;
+
+  // The user facing source of this recipient.
+  enum Bucket {
+    // From the Suggested section.
+    SUGGESTED = 1;
+    // From the Contacts section.
+    CONTACTS = 2;
+    // From a search.
+    SEARCH = 3;
+  }
+}

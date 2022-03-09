@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.instruments.views.DirectDepositOptionsSheet android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/copy_routing_number_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" />
+    <Button android:id="@id/copy_account_number_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" />
+    <Button android:id="@id/close" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" style="@style/Widget.Cash.Bottomsheet.Item" />
+</com.squareup.cash.instruments.views.DirectDepositOptionsSheet>

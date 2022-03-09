@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.formview.components.FormAvatar android:layout_gravity="center" android:layout_width="64.0dip" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/avatar_single" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+    <ImageView android:id="@id/avatar_top" android:layout_width="0.0dip" android:layout_height="0.0dip" android:importantForAccessibility="no" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintWidth_default="percent" app:layout_constraintWidth_percent="0.7" />
+    <com.squareup.cash.ui.widget.image.ClippedImageView android:id="@id/avatar_bottom" android:layout_width="0.0dip" android:layout_height="0.0dip" android:importantForAccessibility="no" app:layout_constraintDimensionRatio="1" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_default="percent" app:layout_constraintWidth_percent="0.7" />
+</com.squareup.cash.formview.components.FormAvatar>

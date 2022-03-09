@@ -1,0 +1,12 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardupsell/view_card_upsell_swipe_screen.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardupsell;
+
+// Triggers when customer is shown Card Tab Null State Upsell Swipe Screen
+message ViewCardUpsellSwipeScreen {
+  // Provided by analytics_key field in composer config proto
+  optional string treatment = 1;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.PasscodeAndExpirationView android:orientation="vertical" android:id="@id/blocker_keypad_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.squareup.cash.mooncake.components.MooncakeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:elevation="0.0dip" app:navigationContentDescription="@string/close_cont_desc" app:navigationIcon="@drawable/close_black" />
+    <LinearLayout android:orientation="vertical" android:id="@id/blocker_keypad_container_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:id="@id/title" android:padding="@dimen/blockers_editor_padding_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.squareup.cash.ui.blockers.LoadingLayout android:id="@id/loading_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.squareup.cash.ui.widget.KeyboardlessEditText android:id="@id/input" android:background="@android:color/transparent" android:padding="@dimen/blockers_editor_padding_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/confirm_cvv_hint" />
+        </com.squareup.cash.ui.blockers.LoadingLayout>
+    </LinearLayout>
+    <com.squareup.cash.ui.widget.keypad.KeypadView android:id="@id/blocker_keypad_container_keypad" android:layout_width="fill_parent" android:layout_height="@dimen/blockers_keypad_height" android:layout_marginBottom="@dimen/blockers_button_bar_gap" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+    <com.squareup.cash.mooncake.components.MooncakePrimaryButton android:id="@id/next_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/blockers_padding" android:text="@string/blockers_next" android:layout_marginStart="@dimen/blockers_padding" android:layout_marginEnd="@dimen/blockers_padding" />
+</com.squareup.cash.blockers.views.PasscodeAndExpirationView>

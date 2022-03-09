@@ -1,0 +1,9 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/appreviews/prompt_app_review_from_client_route.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.appstorereviews;
+
+// Triggers when customer is prompted for App Store review via ClientRoute.
+message PromptAppReviewFromClientRoute {}

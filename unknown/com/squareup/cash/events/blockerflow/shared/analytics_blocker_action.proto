@@ -1,0 +1,30 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/blockerflow/shared/analytics_blocker_action.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.blockerflow.shared;
+
+// Different types of blocker actions.
+enum AnalyticsBlockerAction {
+  // See squareup.franklin.api.BlockerAction.EndFlowAction.
+  END_FLOW_ACTION = 1;
+  // See squareup.franklin.api.BlockerAction.MenuAction.
+  MENU_ACTION = 2;
+  // See squareup.franklin.api.BlockerAction.OpenURLAction.
+  OPEN_URL_ACTION = 3;
+  // See squareup.franklin.api.BlockerAction.SkipBlockerAction.
+  SKIP_BLOCKER_ACTION = 4;
+  // See squareup.franklin.api.BlockerAction.SubmitAction.
+  SUBMIT_ACTION = 5;
+  // See squareup.franklin.api.BlockerAction.InternalNavigationAction.
+  INTERNAL_NAVIGATION_ACTION = 6;
+  // See squareup.franklin.api.BlockerAction.SignOutAction.
+  SIGN_OUT_ACTION = 7;
+  // See squareup.franklin.api.BlockerAction.ShareFileAction.
+  SHARE_FILE_ACTION = 8;
+  // See squareup.franklin.api.BlockerAction.ConfirmationDialog.
+  CONFIRMATION_DIALOG_FIRST = 9;
+  // See squareup.franklin.api.BlockerAction.ViewFileAction.
+  VIEW_ACTION = 10;
+}

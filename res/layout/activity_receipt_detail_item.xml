@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.history.PaymentReceiptItemView android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/separator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" />
+    <com.squareup.cash.ui.widget.text.BalancedLineTextView android:id="@id/label" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="4.0dip" />
+    <com.squareup.cash.ui.widget.text.BalancedLineTextView android:gravity="end" android:id="@id/value" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="4.0dip" />
+</com.squareup.cash.ui.history.PaymentReceiptItemView>

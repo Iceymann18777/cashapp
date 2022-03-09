@@ -1,0 +1,36 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/sharesheet/tap_share_sheet_item.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.sharesheet;
+
+// Triggered when the customer taps on a share sheet option item.
+message TapShareSheetItem {
+  // Selected share target.
+  optional ShareTarget share_target = 1;
+
+  // True indicates that shareable assets were loaded and available locally
+  // at the time of sharing, false indicates otherwise.
+  optional bool assets_loaded = 2;
+
+  // Available share targets.
+  enum ShareTarget {
+    // Not set.
+    UNSPECIFIED = 0;
+    // Sharing cashtag link to Twitter.
+    TWITTER = 1;
+    // Sharing QR code to Instagram.
+    INSTAGRAM = 2;
+    // Sharing QR code to Instagram Stories.
+    INSTAGRAM_STORIES = 3;
+    // Sharing cashtag link via SMS.
+    SMS = 4;
+    // Copying cashtag link to clipboard.
+    COPY_TO_CLIPBOARD = 5;
+    // Saving QR code to Photos.
+    SAVE_TO_PHOTOS = 6;
+    // Sharing cashtag link to the system share sheet.
+    MORE = 7;
+  }
+}

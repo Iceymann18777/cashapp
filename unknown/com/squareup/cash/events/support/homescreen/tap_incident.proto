@@ -1,0 +1,52 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/support/homescreen/tap_incident.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.support.homescreen;
+
+// Tap Incident
+// 
+// Event Description:
+// The customer taps on an incident.
+// 
+// Point of Trigger:
+// Customer taps on the content part of the incident banner
+// but not the subcription button.
+message TapIncident {
+  // Client generated unique identifier per Support Home session
+  optional string flow_token = 1;
+
+  // Unique identifier of the incident.
+  optional string incident_id = 2;
+
+  // The status of the incident.
+  optional Status status = 3;
+
+  // Indicate whether tap action triggers an expansion or collapse.
+  optional Action action = 4;
+
+  // Indicate the number of incidents displayed on the screen.
+  optional int32 number_of_incidents = 5;
+
+  // Indicate the display position of the incident on the screen.
+  // Value starts from 1.
+  optional int32 position = 6;
+
+  // Indicate whether customer can subscribe or unsubscribe.
+  optional bool can_change_subscription = 7;
+
+  // Possible incident status.
+  enum Status {
+    INVESTIGATING = 1;
+    IDENTIFIED = 2;
+    RESOLVED = 3;
+    UNKNOWN = 4;
+  }
+
+  // Possible action.
+  enum Action {
+    EXPAND = 1;
+    COLLAPSE = 2;
+  }
+}

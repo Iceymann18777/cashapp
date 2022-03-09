@@ -1,0 +1,13 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardcontrols/disable_card.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardcontrols;
+
+// This event triggers when the customer disables their card.
+message DisableCard {
+  optional string flow_token = 1;
+
+  optional string client_scenario = 2;
+}

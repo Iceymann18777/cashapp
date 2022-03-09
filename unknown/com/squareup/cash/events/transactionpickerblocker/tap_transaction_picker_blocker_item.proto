@@ -1,0 +1,18 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/transactionpickerblocker/tap_transaction_picker_blocker_item.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.transactionpickerblocker;
+
+// Tap Transaction Picker Blocker Item
+// 
+// Event Description:
+// The customer taps on a transaction from the transaction picker
+message TapTransactionPickerBlockerItem {
+  // Flow token of the transaction picker blocker.
+  optional string flow_token = 1;
+
+  // Token of the selected transaction
+  optional string entity_id = 2;
+}

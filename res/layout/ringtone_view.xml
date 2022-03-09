@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.profile.views.RingtoneView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/dialog_max_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ringtone_picker_title" style="@style/Widget.Cash.Dialog.Title" />
+    <ListView android:scrollbarStyle="outsideOverlay" android:id="@id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:buttonBarStyle">
+        <Button android:id="@id/cancel" android:text="@string/ringtone_picker_negative" style="?android:buttonBarButtonStyle" />
+        <Button android:id="@id/ok" android:text="@string/ringtone_picker_positive" style="?android:buttonBarButtonStyle" />
+    </LinearLayout>
+</com.squareup.cash.profile.views.RingtoneView>

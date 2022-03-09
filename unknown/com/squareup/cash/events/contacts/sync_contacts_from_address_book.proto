@@ -1,0 +1,26 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/contacts/sync_contacts_from_address_book.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.contacts;
+
+// Measures the size and number of contacts during contact sync.
+message SyncContactsFromAddressBook {
+  // Removed the int64 version of contacts_size_bytes since our events infra doesn't support it
+  reserved 4;
+
+  // The total number of contacts in the customer's address book, including any that
+  // have already been synced.
+  optional int32 number_of_contacts = 1;
+
+  // The number of aliases that were added since the last time synced.
+  optional int32 number_of_added_aliases = 2;
+
+  // The number of aliases that were removed since the last time synced.
+  optional int32 number_of_removed_aliases = 3;
+
+  // The size, in bytes, of all of the contacts in the customer's address book.
+  // This includes all known fields on each contact.
+  optional int32 contacts_size_bytes = 5;
+}

@@ -1,0 +1,23 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/bitcoin/withdrawal/open_bitcoin_qr_code_scanner.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.bitcoin.withdrawal;
+
+// Triggers when user tap scan icon to scan Bitcoin address
+// for withdrawal.
+message OpenBitcoinQRCodeScanner {
+  // screen from where scanner was opened
+  optional Source source = 1;
+
+  // Different sources where Bitcoin QR code scan be triggered
+  enum Source {
+    // for compatibility. do not use.
+    UNSPECIFIED = 0;
+    // bitcoin recipient selector screen
+    RECIPIENT_SELECTOR = 1;
+    // bitcoin amount entry screen
+    AMOUNT_ENTRY = 2;
+  }
+}

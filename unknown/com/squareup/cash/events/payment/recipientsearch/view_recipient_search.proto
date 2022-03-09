@@ -1,0 +1,9 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/recipientsearch/view_recipient_search.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.recipientsearch;
+
+// Triggers when recipient search screen is loaded
+message ViewRecipientSearch {}

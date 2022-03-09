@@ -1,0 +1,67 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/customerprofile/view_customer_profile.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.customerprofile;
+
+import "com/squareup/cash/events/customerprofile/shared/contact_status_enum.proto";
+
+// View Customer Profile
+// 
+// Event Description:
+// A customer profile is a view that represents customers on CashApp.
+// This replaces the threaded view as a way for the current user to
+// see more context and have confidence in who they're sending to.
+// 
+// Point of Trigger:
+// When the view is loaded and we have all the contextual information we need,
+// i.e. after we've loaded a response from GetProfileDetails.
+message ViewCustomerProfile {
+  // The external_id that is sent in the InitiatePaymentRequest.
+  // This id is generated client-side and can be used to tie events
+  // that happen before a payment is created to server side payment events.
+  // In profile we'll either take an external_id that already exists in the
+  // recipient selector, or create a new one for when a profile precedes Quick Pay.
+  optional string external_id = 1;
+
+  // The entry point used to get to this customer profile.
+  optional EntryPoint entry_point = 2;
+
+  // Where the customer profile was shown from.
+  optional Context context = 3;
+
+  // Whether the customer is in the current user's contacts.
+  optional com.squareup.cash.events.customerprofile.shared.ContactStatus contact_status = 4;
+
+  // Whether this profile has a bio.
+  optional bool has_bio = 5;
+
+  // Whether this profile has a verified badge.
+  optional bool has_verified_badge = 6;
+
+  // Whether this profile has a business badge.
+  optional bool has_business_badge = 7;
+
+  enum EntryPoint {
+    // From an avatar in a table view cell.
+    CELL_AVATAR = 1;
+    // From an info indicator in a table view cell.
+    CELL_AFFORDANCE = 2;
+    // From the header avatar in the receipt view.
+    RECEIPT_HEADER = 3;
+    // From the quick access bar at the top of Activity.
+    QUICK_ACCESS_AVATAR = 4;
+    // From a view profile payment history button.
+    VIEW_PROFILE_OVERFLOW_BUTTON = 5;
+    // From the confirmation dialog in the payment flow.
+    CONFIRMATION_DIALOG = 6;
+  }
+
+  enum Context {
+    // From Activity
+    ACTIVITY = 1;
+    // From the Payment Flow
+    PAYMENT_FLOW = 2;
+  }
+}

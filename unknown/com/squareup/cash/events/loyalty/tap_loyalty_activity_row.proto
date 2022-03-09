@@ -1,0 +1,17 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/loyalty/tap_loyalty_activity_row.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.loyalty;
+
+// Customer taps the row view in activity for a loyalty event.
+message TapLoyaltyActivityRow {
+  optional string merchant_token = 1;
+
+  optional string loyalty_program_token = 2;
+
+  optional string loyalty_account_token = 3;
+
+  optional string entity_id = 4;
+}

@@ -1,0 +1,60 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/threeds/receive_three_ds_web_challenge_redirect_response.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.threeds;
+
+// Receive Three DS Web Challenge Redirect Response
+// 
+// Event Description: 
+// When we receive the response for a given Send – either successfully or failed
+// to evaluate (with associated error messaging). Note this is not a reflection
+// of the challenge outcome, but rather just whether CashApp successfully
+// received a response or not.
+// 
+// Point of Trigger: 
+// Customer receives the response from 3DS evaluation, and we load a success
+// screen, failure screen, or proceed to an additional step in the 3DS
+// challenge
+// 
+// Related Screen: 
+// ThreeDs Blocker (on success, ends blocker flow; on failure, shows error
+// screen)
+// 
+// Related Metric(s) and Dimension(s): Load Time, 3DS Volume and Rates/Funnel
+message ReceiveThreeDSWebChallengeRedirectResponse {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+
+  // Result of the attempt to load the URL.
+  optional ResultState result_state = 3;
+
+  // Localized error text, if applicable. Not present for success state.
+  optional string result_error_description = 4;
+
+  // Type of error that occurred, if applicable. Not present for success state.
+  optional ResultErrorType result_error_type = 5;
+
+  // Http error code, if present.
+  optional int32 result_error_code = 6;
+
+  // Possible result states for loading.
+  enum ResultState {
+    // Successfully loaded.
+    SUCCESS = 1;
+    // Failed to load.
+    FAILURE = 2;
+  }
+
+  // Possible result error types.
+  enum ResultErrorType {
+    // Attempt may be manually retried by the customer tapping a button.
+    RETRIABLE = 1;
+    // Permanent failure.
+    NONRETRIABLE = 2;
+  }
+}

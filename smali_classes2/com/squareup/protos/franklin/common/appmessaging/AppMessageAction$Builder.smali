@@ -1,0 +1,233 @@
+.class public final Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;
+.super Lcom/squareup/wire/Message$Builder;
+.source "AppMessageAction.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Builder"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/squareup/wire/Message$Builder<",
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction;",
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
+    d1 = {
+        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\r\u0018\u00002\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\u00a2\u0006\u0004\u0008\u001f\u0010 J\u0017\u0010\u0004\u001a\u00020\u00002\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\u0017\u0010\u0006\u001a\u00020\u00002\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0004\u0008\u0006\u0010\u0005J\u0017\u0010\u0008\u001a\u00020\u00002\u0008\u0010\u0008\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0017\u0010\n\u001a\u00020\u00002\u0008\u0010\n\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0004\u0008\n\u0010\u0005J\u0017\u0010\u000c\u001a\u00020\u00002\u0008\u0010\u000c\u001a\u0004\u0018\u00010\u000b\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u0017\u0010\u000f\u001a\u00020\u00002\u0008\u0010\u000f\u001a\u0004\u0018\u00010\u000e\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0017\u0010\u0012\u001a\u00020\u00002\u0008\u0010\u0012\u001a\u0004\u0018\u00010\u0011\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u0017\u0010\u0015\u001a\u00020\u00002\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0014\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J\u000f\u0010\u0017\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0018R\u0018\u0010\n\u001a\u0004\u0018\u00010\u00038\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008\n\u0010\u0019R\u0018\u0010\u000c\u001a\u0004\u0018\u00010\u000b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008\u000c\u0010\u001aR\u0018\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008\u000f\u0010\u001bR\u0018\u0010\u0008\u001a\u0004\u0018\u00010\u00078\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0008\u0010\u001cR\u0018\u0010\u0012\u001a\u0004\u0018\u00010\u00118\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0012\u0010\u001dR\u0018\u0010\u0006\u001a\u0004\u0018\u00010\u00038\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0006\u0010\u0019R\u0018\u0010\u0015\u001a\u0004\u0018\u00010\u00148\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0015\u0010\u001eR\u0018\u0010\u0004\u001a\u0004\u0018\u00010\u00038\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0004\u0010\u0019\u00a8\u0006!"
+    }
+    d2 = {
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;",
+        "Lcom/squareup/wire/Message$Builder;",
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction;",
+        "",
+        "action_identifier",
+        "(Ljava/lang/String;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;",
+        "title",
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Action;",
+        "action",
+        "(Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Action;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;",
+        "action_argument",
+        "Lcom/squareup/protos/franklin/api/SharingContent;",
+        "sharing_content",
+        "(Lcom/squareup/protos/franklin/api/SharingContent;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;",
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$DialogContent;",
+        "dialog_content",
+        "(Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$DialogContent;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;",
+        "Lcom/squareup/protos/franklin/common/scenarios/ScenarioPlan;",
+        "scenario_plan",
+        "(Lcom/squareup/protos/franklin/common/scenarios/ScenarioPlan;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;",
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$ActionThemeColors;",
+        "theme_colors",
+        "(Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$ActionThemeColors;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;",
+        "build",
+        "()Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction;",
+        "Ljava/lang/String;",
+        "Lcom/squareup/protos/franklin/api/SharingContent;",
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$DialogContent;",
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Action;",
+        "Lcom/squareup/protos/franklin/common/scenarios/ScenarioPlan;",
+        "Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$ActionThemeColors;",
+        "<init>",
+        "()V",
+        "protos_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x4,
+        0x2
+    }
+.end annotation
+
+
+# instance fields
+.field public action:Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Action;
+
+.field public action_argument:Ljava/lang/String;
+
+.field public action_identifier:Ljava/lang/String;
+
+.field public dialog_content:Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$DialogContent;
+
+.field public scenario_plan:Lcom/squareup/protos/franklin/common/scenarios/ScenarioPlan;
+
+.field public sharing_content:Lcom/squareup/protos/franklin/api/SharingContent;
+
+.field public theme_colors:Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$ActionThemeColors;
+
+.field public title:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lcom/squareup/wire/Message$Builder;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final action(Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Action;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->action:Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Action;
+
+    return-object p0
+.end method
+
+.method public final action_argument(Ljava/lang/String;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->action_argument:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public final action_identifier(Ljava/lang/String;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->action_identifier:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public build()Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction;
+    .locals 11
+
+    .line 2
+    new-instance v10, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction;
+
+    .line 3
+    iget-object v1, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->action_identifier:Ljava/lang/String;
+
+    .line 4
+    iget-object v2, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->title:Ljava/lang/String;
+
+    .line 5
+    iget-object v3, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->action:Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Action;
+
+    .line 6
+    iget-object v4, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->action_argument:Ljava/lang/String;
+
+    .line 7
+    iget-object v5, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->sharing_content:Lcom/squareup/protos/franklin/api/SharingContent;
+
+    .line 8
+    iget-object v6, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->dialog_content:Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$DialogContent;
+
+    .line 9
+    iget-object v7, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->scenario_plan:Lcom/squareup/protos/franklin/common/scenarios/ScenarioPlan;
+
+    .line 10
+    iget-object v8, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->theme_colors:Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$ActionThemeColors;
+
+    .line 11
+    invoke-virtual {p0}, Lcom/squareup/wire/Message$Builder;->buildUnknownFields()Lokio/ByteString;
+
+    move-result-object v9
+
+    move-object v0, v10
+
+    .line 12
+    invoke-direct/range {v0 .. v9}, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Action;Ljava/lang/String;Lcom/squareup/protos/franklin/api/SharingContent;Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$DialogContent;Lcom/squareup/protos/franklin/common/scenarios/ScenarioPlan;Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$ActionThemeColors;Lokio/ByteString;)V
+
+    return-object v10
+.end method
+
+.method public bridge synthetic build()Lcom/squareup/wire/Message;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->build()Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final dialog_content(Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$DialogContent;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->dialog_content:Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$DialogContent;
+
+    return-object p0
+.end method
+
+.method public final scenario_plan(Lcom/squareup/protos/franklin/common/scenarios/ScenarioPlan;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->scenario_plan:Lcom/squareup/protos/franklin/common/scenarios/ScenarioPlan;
+
+    return-object p0
+.end method
+
+.method public final sharing_content(Lcom/squareup/protos/franklin/api/SharingContent;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->sharing_content:Lcom/squareup/protos/franklin/api/SharingContent;
+
+    return-object p0
+.end method
+
+.method public final theme_colors(Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$ActionThemeColors;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->theme_colors:Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$ActionThemeColors;
+
+    return-object p0
+.end method
+
+.method public final title(Ljava/lang/String;)Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/squareup/protos/franklin/common/appmessaging/AppMessageAction$Builder;->title:Ljava/lang/String;
+
+    return-object p0
+.end method

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.profile.views.MyProfileView android:id="@id/profile_root" android:background="?android:windowBackground" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false" app:drawsInsets="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/scroll" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/profile_qr_button" android:padding="@dimen/tab_toolbar_menu_padding" android:layout_width="@dimen/tab_toolbar_menu_size" android:layout_height="@dimen/tab_toolbar_menu_size" android:layout_marginTop="8.0dip" android:scaleType="center" android:foregroundGravity="center" android:contentDescription="@string/tab_menu_profile_qr" android:layout_marginEnd="16.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <com.squareup.cash.mooncake.components.MooncakeCloseButton android:id="@id/profile_close" android:padding="@dimen/tab_toolbar_menu_padding" android:layout_width="@dimen/tab_toolbar_menu_size" android:layout_height="@dimen/tab_toolbar_menu_size" android:layout_marginTop="8.0dip" android:scaleType="center" android:foregroundGravity="center" android:layout_marginStart="16.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" layout="@layout/my_profile_header" />
+            <com.squareup.cash.mooncake.components.MooncakeSecondaryButton android:textColor="?colorAccent" android:id="@id/action_invite" android:layout_width="fill_parent" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="?tabsButtonRoundedStyle" />
+            <com.squareup.cash.mooncake.components.MooncakeSecondaryButton android:id="@id/profile_share" android:visibility="gone" android:layout_width="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="?tabsButtonRoundedStyle" />
+            <LinearLayout android:orientation="vertical" android:id="@id/profile_elements" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+                <TextView android:id="@id/bio" android:paddingTop="8.0dip" android:paddingBottom="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="32.0dip" />
+                <com.squareup.cash.profile.views.ProfileElementView android:id="@id/joined_at" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View android:id="@id/profile_settings_section_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="16.0dip" />
+            <include android:id="@id/profile_settings_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" layout="@layout/profile_settings_section" />
+            <LinearLayout android:orientation="vertical" android:id="@id/options_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/profile_miscellaneous_section" />
+                <include layout="@layout/profile_footer_section" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.squareup.cash.profile.views.MyProfileView>

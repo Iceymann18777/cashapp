@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/tap_style_picker_section_selector.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when user clicks on a tab in style picker.
+message TapStylePickerSectionSelector {
+  optional string section = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+}

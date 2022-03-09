@@ -1,0 +1,38 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/capture_document.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv;
+
+// Capture Document
+// 
+// Event Description: 
+// The client successfully captures an image of the customer's document,
+// either manually or automatically.
+// 
+// Point of Trigger: 
+// For manual capture, when the customer taps the capture button.
+// For automatic capture, when the document is successfully identified.
+message CaptureDocument {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+
+  // The mode of capture for the document.
+  optional CaptureMode capture_mode = 3;
+
+  // The number of warnings present during capture. 
+  // Not present for automatic capture.
+  optional int32 number_of_warnings = 4;
+
+  // Possible modes for capturing.
+  enum CaptureMode {
+    // Automatically captured.
+    AUTOMATIC = 1;
+    // Manually captured by the customer.
+    MANUAL = 2;
+  }
+}

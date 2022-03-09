@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.ui.profile.AddressSheet android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Bottomsheet"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/header" android:paddingTop="@dimen/profile_address_sheet_vertical_padding" android:paddingBottom="@dimen/profile_address_sheet_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Button android:id="@id/replace_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_replace_address" />
+    <Button android:id="@id/cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" />
+</com.squareup.cash.ui.profile.AddressSheet>

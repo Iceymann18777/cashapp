@@ -1,0 +1,16 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/addressblocker/tap_address_blocker_back_button.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.addressblocker;
+
+// Triggered when the customer taps the
+// “Back” button to return to the previous step
+message TapAddressBlockerBackButton {
+  // Optional flow token of the address blocker.
+  optional string flow_token = 1;
+
+  // Optional client scenario of the address blocker.
+  optional string client_scenario = 2;
+}

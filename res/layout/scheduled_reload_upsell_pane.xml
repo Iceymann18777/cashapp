@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.ScheduledReloadUpsellPane android:background="@drawable/gray_stroked_rectangle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:layout_marginStart="64.0dip" android:layout_marginEnd="64.0dip" app:textHorizontalPadding="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

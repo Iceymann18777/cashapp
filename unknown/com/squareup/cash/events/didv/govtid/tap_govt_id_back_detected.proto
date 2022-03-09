@@ -1,0 +1,33 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/govtid/tap_govt_id_back_detected.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv.govtid;
+
+// Tap Govt Id Back Detected
+// 
+// Event Description:
+// Customer response after back of ID is successfully detected.
+// - either retake or use photo action.
+// 
+// Point of Trigger:
+// Customer selects action button.
+message TapGovtIdBackDetected {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Action that was tapped.
+  optional Action action = 2;
+
+  // A field for reporting different experiment treatments. (i.e. mitek vs control)
+  optional string treatment = 3;
+
+  // Actions.
+  enum Action {
+    // Retake image.
+    RETAKE = 1;
+    // Use photo and move on.
+    USE_PHOTO = 2;
+  }
+}

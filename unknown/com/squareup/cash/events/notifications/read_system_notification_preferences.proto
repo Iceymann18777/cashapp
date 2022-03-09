@@ -1,0 +1,96 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/notifications/read_system_notification_preferences.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.notifications;
+
+// A customer's OS-level notification preferences.
+message ReadSystemNotificationPreferences {
+  // iOS
+  // Corresponds to UNUserNotificationSettings.authorizationStatus
+  optional string ios_authorization_status = 1;
+
+  // Corresponds to UNUserNotificationSettings.soundSetting
+  optional string ios_sound = 2;
+
+  // Corresponds to UNUserNotificationSettings.badgeSetting
+  optional string ios_badge = 3;
+
+  // Corresponds to UNUserNotificationSettings.alertSetting
+  optional string ios_alert = 4;
+
+  // Corresponds to UNUserNotificationSettings.notificationCenterSetting
+  optional string ios_notification_center = 5;
+
+  // Corresponds to UNUserNotificationSettings.lockScreenSetting
+  optional string ios_lock_screen = 6;
+
+  // Corresponds to UNUserNotificationSettings.carPlaySetting
+  optional string ios_car_play = 7;
+
+  // Corresponds to UNUserNotificationSettings.alertStyle
+  optional string ios_alert_style = 8;
+
+  // Corresponds to UNUserNotificationSettings.showPreviewsSetting
+  optional string ios_show_previews = 9;
+
+  // Corresponds to UNUserNotificationSettings.criticalAlertSetting
+  optional string ios_critical_alert = 10;
+
+  // Corresponds to UNUserNotificationSettings.providesAppNotificationSettings
+  optional bool ios_provides_app_notification = 11;
+
+  // Corresponds to UNUserNotificationSettings.announcementSetting
+  optional string ios_announcement = 12;
+
+  // Android
+  optional bool android_notifications_enabled = 13;
+
+  // Supported in Android Q
+  optional bool android_notifications_paused = 14;
+
+  // Notification channels
+  // Supported in Android O
+  optional bool android_general_channel_enabled = 15;
+
+  optional bool android_general_notification_badge = 16;
+
+  optional string android_general_notification_importance = 17;
+
+  optional bool android_general_should_vibrate = 18;
+
+  // Supported in Android Q
+  optional bool android_general_user_set_importance = 19;
+
+  // Supported in Android R
+  optional bool android_general_user_set_sound = 20;
+
+  optional bool android_payments_bill_channel_enabled = 21;
+
+  optional bool android_payments_bill_notification_badge = 22;
+
+  optional string android_payments_bill_notification_importance = 23;
+
+  optional bool android_payments_bill_should_vibrate = 24;
+
+  // Supported in Android Q
+  optional bool android_payments_bill_user_set_importance = 25;
+
+  // Supported in Android R
+  optional bool android_payments_bill_user_set_sound = 26;
+
+  optional bool android_payments_cash_channel_enabled = 27;
+
+  optional bool android_payments_cash_notification_badge = 28;
+
+  optional string android_payments_cash_notification_importance = 29;
+
+  optional bool android_payments_cash_should_vibrate = 30;
+
+  // Supported in Android Q
+  optional bool android_payments_cash_user_set_importance = 31;
+
+  // Supported in Android R
+  optional bool android_payments_cash_user_set_sound = 32;
+}

@@ -1,0 +1,19 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/addressblocker/address_blocker_encountered_network_error.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.addressblocker;
+
+// Triggered when the network call fails to complete.
+message AddressBlockerEncounteredNetworkError {
+  optional string error_domain = 1;
+
+  optional int32 error_code = 2;
+
+  // Optional flow token of the address blocker.
+  optional string flow_token = 3;
+
+  // Optional client scenario of the address blocker.
+  optional string client_scenario = 4;
+}

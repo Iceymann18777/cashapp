@@ -1,0 +1,16 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/profile/tap_profile_notifications.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.profile;
+
+import "com/squareup/cash/events/investing/notifications/shared/notification_action_enum.proto";
+import "com/squareup/cash/events/investing/notifications/shared/notification_type_enum.proto";
+
+// Tap a stock or Bicoin notification cell from the Account Profile Notifications screen.
+message TapOnProfileNotifications {
+  optional com.squareup.cash.events.investing.notifications.shared.NotificationType notification_type = 1;
+
+  optional com.squareup.cash.events.investing.notifications.shared.NotificationAction notification_action = 2;
+}

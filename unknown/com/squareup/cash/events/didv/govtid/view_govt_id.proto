@@ -1,0 +1,21 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/govtid/view_govt_id.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv.govtid;
+
+// View Govt Id
+// 
+// Event Description:
+// Customer enters screen to scan the front of ID.
+// 
+// Point of Trigger:
+// When the government id scanning view first loads.
+message ViewGovtId {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // A field for reporting different experiment treatments. (i.e. mitek vs control)
+  optional string treatment = 2;
+}

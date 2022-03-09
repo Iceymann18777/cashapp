@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Profile.DividedList">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="@dimen/profile_card_detail_padding" android:paddingBottom="@dimen/profile_card_detail_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/profile_item_padding_side" android:paddingEnd="@dimen/profile_item_padding_side">
+            <ImageView android:id="@id/card_icon" android:layout_width="@dimen/profile_card_detail_icon_width" android:layout_height="@dimen/profile_card_detail_icon_height" android:layout_marginBottom="@dimen/profile_card_detail_icon_gap" />
+            <TextView android:textAppearance="@style/TextAppearance.Cash.Cell.Medium" android:textSize="18.0sp" android:id="@id/card_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+            <TextView android:textAppearance="@style/TextAppearance.Cash.Cell" android:textSize="14.0sp" android:id="@id/card_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="@style/TextAppearance.Cash.Cell" android:textSize="14.0sp" android:gravity="center" android:id="@id/card_verifying" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/profile_card_verification_message" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

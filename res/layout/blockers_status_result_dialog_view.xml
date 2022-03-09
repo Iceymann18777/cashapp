@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.StatusResultDialogView android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/dialog_max_width"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/left" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="@dimen/dialog_padding_start" />
+        <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/right" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_end="@dimen/dialog_padding_end" />
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_padding_top" android:layout_marginBottom="12.0dip" android:importantForAccessibility="no" app:layout_constraintBottom_toTopOf="@id/text" app:layout_constraintEnd_toStartOf="@id/right" app:layout_constraintStart_toEndOf="@id/left" app:layout_constraintTop_toTopOf="parent" />
+        <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textAppearance="@style/TextAppearance.Cash.Instructions" android:textColor="?android:textColorPrimary" android:gravity="center" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constrainedWidth="true" app:layout_constraintEnd_toStartOf="@id/right" app:layout_constraintStart_toEndOf="@id/left" app:layout_constraintTop_toBottomOf="@id/icon" app:layout_goneMarginTop="@dimen/dialog_padding_top" />
+        <LinearLayout android:orientation="vertical" android:id="@id/button_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_padding_bottom" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/text" style="@style/Widget.Cash.Dialog.VerticalButtonBar">
+            <Button android:textColor="?colorAccent" android:id="@id/secondary_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Dialog.VerticalButtonBarButton" />
+            <Button android:textColor="?colorAccent" android:id="@id/primary_button" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Dialog.VerticalButtonBarButton" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.squareup.cash.blockers.views.StatusResultDialogView>

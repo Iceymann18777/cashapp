@@ -1,0 +1,20 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/tap_card_customization_mode.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when a stamp is dragged off the card to delete.
+message TapCardCustomizationMode {
+  optional Mode new_mode = 1;
+
+  optional string flow_token = 2;
+
+  optional string client_scenario = 3;
+
+  enum Mode {
+    DRAW = 1;
+    STAMP = 2;
+  }
+}

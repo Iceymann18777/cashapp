@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.instruments.views.DepositCheckView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/check_deposit_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/section_check_deposit_header" style="@style/Widget.Cash.SectionHeader" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/check_deposit_section" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/check_deposit_asset" android:paddingTop="33.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="57.0dip" android:paddingEnd="57.0dip" />
+        <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textSize="18.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/check_deposit_description" android:paddingTop="22.0dip" android:paddingBottom="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="3.0sp" android:paddingStart="57.0dip" android:paddingEnd="57.0dip" android:letterSpacing="0.01" />
+        <View android:id="@id/check_deposit_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="@dimen/profile_item_padding_side" android:layout_marginEnd="@dimen/profile_item_padding_side" />
+        <Button android:id="@id/deposit_check_action" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/section_check_deposit_button_label" android:fontFamily="@font/cashmarket_medium" />
+    </LinearLayout>
+</com.squareup.cash.instruments.views.DepositCheckView>

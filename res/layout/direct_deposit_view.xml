@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.instruments.views.DirectDepositView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/direct_deposit_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dda_header" style="@style/Widget.Cash.SectionHeader" />
+    <LinearLayout android:orientation="vertical" android:id="@id/direct_deposit_section" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/direct_deposit_section_inner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="none">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textSize="20.0sp" android:ellipsize="none" android:id="@id/direct_deposit_routing_number" android:paddingTop="42.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" android:letterSpacing="0.15" app:autoSizeMaxTextSize="20.0sp" app:autoSizeTextType="uniform" style="@style/Widget.Cash.Profile.Item" />
+                <TextView android:textSize="@dimen/profile_section_header_text" android:id="@id/direct_deposit_routing_label" android:paddingTop="8.0dip" android:paddingBottom="22.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dda_routing" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.squareup.cash.ui.widget.text.BalancedLineTextView android:textSize="20.0sp" android:ellipsize="none" android:id="@id/direct_deposit_account_number" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" android:letterSpacing="0.15" app:autoSizeMaxTextSize="20.0sp" app:autoSizeTextType="uniform" style="@style/Widget.Cash.Profile.Item" />
+                <TextView android:textSize="@dimen/profile_section_header_text" android:id="@id/direct_deposit_account_label" android:paddingTop="8.0dip" android:paddingBottom="42.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dda_account" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/direct_deposit_options_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="@dimen/profile_item_padding_side" android:layout_marginEnd="@dimen/profile_item_padding_side" />
+        <Button android:id="@id/direct_deposit_options" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" />
+        <View android:id="@id/direct_deposit_form_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="@dimen/profile_item_padding_side" android:layout_marginEnd="@dimen/profile_item_padding_side" />
+        <Button android:id="@id/direct_deposit_form" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/cashmarket_medium" />
+    </LinearLayout>
+    <TextView android:id="@id/direct_deposit_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.SectionFooter" />
+</com.squareup.cash.instruments.views.DirectDepositView>

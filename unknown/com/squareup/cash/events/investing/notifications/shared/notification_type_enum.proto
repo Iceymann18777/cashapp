@@ -1,0 +1,15 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/investing/notifications/shared/notification_type_enum.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.investing.notifications.shared;
+
+// The type of a notification source. A notification can be
+// triggered from the Stock page or from the Bitcoin page.
+enum NotificationType {
+  // Stock notification was triggerred.
+  STOCK = 1;
+  // Bitcoin notifiaction was triggered.
+  BITCOIN = 2;
+}

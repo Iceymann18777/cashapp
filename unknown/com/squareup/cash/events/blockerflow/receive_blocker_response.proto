@@ -1,0 +1,55 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/blockerflow/receive_blocker_response.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.blockerflow;
+
+// Triggers when we receive a response from the
+// api call for completing a given blocker.
+message ReceiveBlockerResponse {
+  // The un-prefixed ClientScenario enum from squareup.franklin.app protos.
+  // (i.e. PAYMENT_FLOW, ONBOARDING, PROFILE, etc.)
+  optional string client_scenario = 1;
+
+  // The unique flow token given to every flow.
+  optional string flow_token = 2;
+
+  // The server provided id on a BlockerDescriptor.
+  optional string blocker_id = 3;
+
+  // The type of blocker that's contained in go/blockersproto.
+  // The value should be identical to the property key.
+  // (i.e. email, passcode_creation, card, government_id, etc.)
+  // There's a loose contract that only one property will be set,
+  // but in the event that there are multiple, this should be a
+  // comma delimited list in alphabetic order.
+  optional string blocker_type = 4;
+
+  // Whether the input was successful, failed due to a network error, or
+  // failed due to a logical error.
+  optional Status status = 5;
+
+  // With a NETWORK_ERROR status: The HTTP response code.
+  // With a LOGICAL_ERROR status: "LOGICAL_ERROR".
+  optional string error_code = 6;
+
+  // With a NETWORK_ERROR status: The HTTP response error message.
+  // With a LOGICAL_ERROR status: The string representation of the error/status
+  // enum (i.e. TOO_MANY_REQUESTS, CUSTOMER_DOES_NOT_EXIST)
+  optional string error_message = 7;
+
+  // The duration in milliseconds it took between the customer submitting
+  // their input and receiving a response.
+  optional int32 request_duration_ms = 8;
+
+  enum Status {
+    // The input was accepted by the server.
+    SUCCESS = 1;
+    // The request resulted in a networking error.
+    NETWORK_ERROR = 2;
+    // The request resulted in a logical error where the server
+    // returned a 200, but a status that was not SUCCESS.
+    LOGICAL_ERROR = 3;
+  }
+}

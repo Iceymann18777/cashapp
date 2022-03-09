@@ -1,0 +1,33 @@
+.class public abstract Lcom/squareup/cash/ui/DialogChildrenUiContainer$ViewSource;
+.super Ljava/lang/Object;
+.source "DialogChildrenUiContainer.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/squareup/cash/ui/DialogChildrenUiContainer;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "ViewSource"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/squareup/cash/ui/DialogChildrenUiContainer$ViewSource$Inflation;,
+        Lcom/squareup/cash/ui/DialogChildrenUiContainer$ViewSource$Factory;,
+        Lcom/squareup/cash/ui/DialogChildrenUiContainer$ViewSource$BroadwayView;
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

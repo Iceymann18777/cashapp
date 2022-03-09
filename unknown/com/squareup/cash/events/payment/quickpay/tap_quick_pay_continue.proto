@@ -1,0 +1,33 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/payment/quickpay/tap_quick_pay_continue.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.payment.quickpay;
+
+import "com/squareup/cash/events/customerprofile/shared/contact_status_enum.proto";
+import "com/squareup/cash/events/payment/shared/payment_type_enum.proto";
+
+// Tap Quick Pay Continue
+// 
+// Event Description:
+// Quick Pay can have a Request Button, Pay Button or Both, depending on
+// the context.
+// 
+// Point of Trigger:
+// When a customer taps either the Pay or Request button.
+message TapQuickPayContinue {
+  // The external_id that is sent in the InitiatePaymentRequest.
+  // This id is generated client-side and can be used to tie events
+  // that happen before a payment is created to server side payment events.
+  optional string external_id = 1;
+
+  // The selected payment type
+  optional com.squareup.cash.events.payment.shared.PaymentType payment_type = 2;
+
+  // Whether the recipient is in the current user's contacts.
+  optional com.squareup.cash.events.customerprofile.shared.ContactStatus contact_status = 3;
+
+  // An optional value for the source/referrer of the customer to this screen.
+  optional string origin = 4;
+}

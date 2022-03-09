@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.profile.views.ProfilePersonalView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.squareup.cash.mooncake.components.MooncakeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/action_bar_close" app:navigationIcon="?actionBarCloseIcon" app:title="@string/profile_personal_title" app:titleTextAppearance="@style/TextAppearance.Cash.Toolbar.Tabs" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.squareup.cash.appmessages.views.InflatableInlineAppMessageView android:id="@id/app_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" />
+            <TextView android:id="@id/cashtag_section_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.SectionHeader" />
+            <include android:id="@id/cashtag_section" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/profile_cashtag_section" />
+            <TextView android:id="@id/bio_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_section_bio" style="@style/Widget.Cash.SectionHeader" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Profile.Section">
+                <TextView android:ellipsize="end" android:id="@id/bio" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/profile_section_bio_hint" android:lines="1" style="@style/Widget.Cash.Profile.Item" />
+            </LinearLayout>
+            <TextView android:id="@id/profile_aliases_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_section_aliases" style="@style/Widget.Cash.SectionHeader" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/profile_aliases_section" />
+            <TextView android:id="@id/address_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_section_address" style="@style/Widget.Cash.SectionHeader" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Profile.Section">
+                <TextView android:id="@id/address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/profile_account_info_address_hint" android:lines="@null" style="@style/Widget.Cash.Profile.Item" />
+            </LinearLayout>
+            <TextView android:id="@id/country_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_section_country" style="@style/Widget.Cash.SectionHeader" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Profile.Section">
+                <TextView android:id="@id/country" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="@null" style="@style/Widget.Cash.Profile.Item" />
+            </LinearLayout>
+            <TextView android:id="@id/account_type_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_section_account_type" style="@style/Widget.Cash.SectionHeader" />
+            <LinearLayout android:orientation="vertical" android:id="@id/account_type_section" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Profile.Section">
+                <Button android:id="@id/downgrade" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_downgrade" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/profile_footer_buttons_margin_top" android:layout_marginBottom="@dimen/profile_footer_buttons_margin_bottom" style="@style/Widget.Cash.Profile.Section">
+                <Button android:id="@id/pro_upgrade" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_pro_upgrade" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.squareup.cash.profile.views.ProfilePersonalView>

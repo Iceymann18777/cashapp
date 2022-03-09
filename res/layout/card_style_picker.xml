@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:titleEnabled="false">
+            <TextView android:textAppearance="@style/TextAppearance.Cash.Title.Large" android:gravity="bottom" android:id="@id/title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?android:actionBarSize" android:layout_marginBottom="8.0dip" android:layout_marginStart="24.0dip" />
+            <com.squareup.cash.mooncake.components.MooncakeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:elevation="0.0dip" app:layout_collapseMode="pin" app:navigationContentDescription="@string/action_bar_close" app:navigationIcon="@drawable/close_black">
+                <TextView android:textAppearance="@style/TextAppearance.Cash.Title.Small" android:gravity="center" android:id="@id/short_title_text" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.squareup.cash.mooncake.components.MooncakeToolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <com.google.android.material.tabs.SelectableTabLayout android:id="@id/section_headers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="12.0dip" app:tabContentStart="36.0dip" app:tabGravity="center" app:tabIndicator="@drawable/card_style_picker_tab_background" app:tabIndicatorColor="#fff4f4f4" app:tabIndicatorGravity="stretch" app:tabMode="scrollable" app:tabRippleColor="@color/transparent" app:tabSelectedTextColor="@color/standard_black_normal" app:tabTextAppearance="@style/TextAppearance.Cash.Tab.Text" app:tabTextColor="@color/standard_black_pressed" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/card_styles" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="19.0dip" android:paddingEnd="19.0dip" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</merge>

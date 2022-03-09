@@ -1,0 +1,17 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/customerprofile/shared/contact_status_enum.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.customerprofile.shared;
+
+// The contact status from the perspective of the current user
+// of another customer on the platform.
+enum ContactStatus {
+  // Customer is not in the current user's contact book.
+  NOT_IN_CONTACTS = 1;
+  // Customer is not in the current user's contact book.
+  IN_CONTACTS = 2;
+  // Current user has disabled contact book access.
+  CONTACTS_DISABLED = 3;
+}

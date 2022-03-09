@@ -1,0 +1,16 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/formblocker/detect_form_blocker_invalid_input.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.formblocker;
+
+// Triggered after a customer has attempted to submit the input, but the input
+// was determined to be invalid.
+message DetectFormBlockerInvalidInput {
+  // Optional flow token of the form blocker.
+  optional string flow_token = 1;
+
+  // Optional client scenario of the form blocker.
+  optional string client_scenario = 2;
+}

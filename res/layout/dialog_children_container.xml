@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:background="@color/dialog_window_background" android:padding="@dimen/dialog_children_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.squareup.cash.ui.DialogChildrenUiContainer$DialogWrapper"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:id="@id/dialog_children_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/dialog_elevation" />
+</view>

@@ -1,0 +1,11 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/eidv/show_confirm_birthdate_screen.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.eidv;
+
+// Show Confirm Birthdate Screen
+// 
+// Triggered when the Confirm Birthdate screen is shown during IDV.
+message ShowConfirmBirthdateScreen {}

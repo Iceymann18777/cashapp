@@ -1,0 +1,11 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/appreviews/prompt_app_review_error.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.appstorereviews;
+
+// Triggers when customer is prompted for App Store review and fails with an error.
+message PromptAppReviewError {
+  optional string error_message = 1;
+}

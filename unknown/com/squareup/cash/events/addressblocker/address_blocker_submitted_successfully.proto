@@ -1,0 +1,28 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/addressblocker/address_blocker_submitted_successfully.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.addressblocker;
+
+// Triggered when the network response comes back successfully.
+message AddressBlockerSubmittedSuccessfully {
+  optional Status status = 1;
+
+  // Optional flow token of the address blocker.
+  optional string flow_token = 2;
+
+  // Optional client scenario of the address blocker.
+  optional string client_scenario = 3;
+
+  enum Status {
+    // The input was accepted by the server.
+    SUCCESS = 1;
+    // The server encountered an unexpected state.
+    CONCURRENT_MODIFICATION = 2;
+    // Setting the customer address failed on the server.
+    FAILURE = 3;
+    // The input was deemed invalid by the server.
+    INVALID = 4;
+  }
+}

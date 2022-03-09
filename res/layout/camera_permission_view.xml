@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.cash.blockers.views.CameraPermissionView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxWidth="@dimen/dialog_max_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.squareup.cash.ui.widget.text.BalancedLineTextView android:id="@id/message" android:paddingTop="26.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_camera_permission_message" style="@style/Widget.Cash.AlertDialog.Message" />
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Cash.Dialog.VerticalButtonBar">
+        <Button android:textColor="?colorAccent" android:id="@id/dialog_positive" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_camera_permission_open_settings" style="@style/Widget.Cash.Dialog.VerticalButtonBarButton" />
+        <Button android:textColor="?colorAccent" android:id="@id/dialog_negative" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blockers_camera_permission_back" style="@style/Widget.Cash.Dialog.VerticalButtonBarButton" />
+    </LinearLayout>
+</com.squareup.cash.blockers.views.CameraPermissionView>

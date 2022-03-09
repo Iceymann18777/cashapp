@@ -1,0 +1,22 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/didv/send_upload_file_request.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.didv;
+
+// Send Upload File Request
+// 
+// Event Description: 
+// The client app sends the image of the document captured by the customer 
+// for d-IDV to Cash’s servers.
+// 
+// Point of Trigger: 
+// The customer taps 'Confirm' on the document confirmation screen.
+message SendUploadFileRequest {
+  // Client side generated unique token for this blockers flow.
+  optional string flow_token = 1;
+
+  // Comma separated list of payment tokens.
+  optional string payment_tokens = 2;
+}

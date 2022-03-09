@@ -1,0 +1,17 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/tap_style_picker_card_theme.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when user clicks on a card.
+message TapStylePickerCardTheme {
+  optional string theme_token = 1;
+
+  optional int32 index = 2;
+
+  optional string flow_token = 3;
+
+  optional string client_scenario = 4;
+}

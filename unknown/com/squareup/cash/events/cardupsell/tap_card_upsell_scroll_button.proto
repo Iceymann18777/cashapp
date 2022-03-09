@@ -1,0 +1,14 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardupsell/tap_card_upsell_scroll_button.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardupsell;
+
+// Triggers when customer clicks on button on Scroll Screen
+message TapCardUpsellScrollButton {
+  optional string url = 1;
+
+  // Populated by analytics_key field in composer config for ButtonElement
+  optional string treatment = 2;
+}

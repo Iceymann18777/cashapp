@@ -1,0 +1,21 @@
+// Proto schema formatted by Wire, do not edit.
+// Source: com/squareup/cash/events/cardonboarding/submitted_card_customization.proto
+
+syntax = "proto2";
+
+package com.squareup.cash.events.cardonboarding;
+
+// Triggers when user orders card using legacy card design blocker.
+message SubmittedCardCustomization {
+  optional bool cashtag_eligible = 1;
+
+  optional bool has_cashtag = 2;
+
+  optional bool has_signature = 3;
+
+  optional bool has_stamps = 4;
+
+  optional string flow_token = 5;
+
+  optional string client_scenario = 6;
+}
